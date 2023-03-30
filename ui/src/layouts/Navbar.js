@@ -15,6 +15,8 @@ import GamepadIcon from "@mui/icons-material/Gamepad";
 import { Link } from "react-router-dom";
 import { isUserLoggedIn, getToken } from "../utility/utils";
 import { getUser } from "../utility/api";
+import logoImg from "../Images/Lotus.svg";
+
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -78,9 +80,12 @@ function Navbar() {
   ];
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="xs">
         <Toolbar disableGutters>
-          <GamepadIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+        <img src = {logoImg} sx={{ display: { xs: "" , md: "none" }, mr: 1 }}/>
+      {/* <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          <GamepadIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -219,7 +224,8 @@ function Navbar() {
         </Toolbar>
       </Container>
     </AppBar>
-  );
+    );
 }
+
 
 export default Navbar;
