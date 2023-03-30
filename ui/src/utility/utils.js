@@ -1,6 +1,5 @@
 /**
- * Checks if a user is currently logged in.
- *
+ * Checks if a user is currently logged in. *
  * @function
  * @returns {boolean} - True if a session token exists, otherwise false.
  */
@@ -8,10 +7,8 @@ export const isUserLoggedIn = () => {
   const token = localStorage.getItem("session_token");
   return token ? true : false;
 };
-
 /**
- * Retrieves the current session token.
- *
+ * Retrieves the current session token. *
  * @function
  * @returns {string} - A session token as a string.
  */
