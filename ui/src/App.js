@@ -26,6 +26,7 @@ function App() {
             <Route path="/register" element={<RegisterForm />} />
             <Route path="/MyWellness" element={<MyWellness />} />
             <Route path="/MyMood" element={<MyMood />} />
+
             <Route path="/user/settings" element={<Settings />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="*" element={<NotFound />} />
