@@ -1,40 +1,19 @@
-import { rest } from 'msw'
+import { rest } from "msw";
 
 // ** mock data JSON
-// import leaderboard from './data/leaderboard.json'
+import { getUserProfile } from "./data/getUserProfile";
 
 // Set URL to mock
-const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:9000'
+const baseUrl = process.env.REACT_APP_API_URL || "http://localhost:9000";
 
 export const handlers = [
-  // rest.get(`${baseUrl}/user/token`, (req, res, ctx) => { // capture "GET /greeting" requests
-   
-  //   return res(ctx.json({username: "dantewanders"})) // respond using a mocked JSON body
-  // }),
-  // rest.get(`${baseUrl}/leaderboard`, (req, res, ctx) => { // capture "GET /greeting" requests
-  //   return res(ctx.json(leaderboard)) // respond using a mocked JSON body
-  // }),
-  // rest.get(`${baseUrl}/leaderboard`, (req, res, ctx) => { // capture "GET /greeting" requests
-  //   return res(ctx.json(leaderboard)) // respond using a mocked JSON body
-  // }),
-  // rest.get(`${baseUrl}/questions/random`, (req, res, ctx) => { // capture "GET /greeting" requests
-  //   const result = getQuestion[Math.floor(Math.random()*getQuestion.length)]
-  //   return res(ctx.json(result)) // respond using a mocked JSON body
-  // }),
-  // rest.get(`${baseUrl}/user/:username`, (req, res, ctx) => { // capture "GET /greeting" requests
-   
-  //   return res(ctx.json(getUserProfile)) // respond using a mocked JSON body
-  // }),
+  rest.get(`${baseUrl}/user/token`, (req, res, ctx) => {
+    // capture "GET" requests
 
-  // rest.get(`${baseUrl}/game/:username`, (req, res, ctx) => { // capture "GET /greeting" requests
-  
-  //   return res(ctx.json(getGameHistory)) // respond using a mocked JSON body
+    return res(ctx.json({ username: "dantewanders" })); // respond using a mocked JSON body
+  }),
+
+  // rest.get(`${baseUrl}/user/:username`, (req, res, ctx) => {
+  //   return res(ctx.json(getUserProfile));
   // }),
-  // rest.get(`${baseUrl}/stats/:username`, (req, res, ctx) => { // capture "GET /greeting" requests
-  
-  //   return res(ctx.json(getGameStatistics)) // respond using a mocked JSON body
-  // }),
-  // rest.get('/farewell', (req, res, ctx) => { // capture "GET /greeting" requests
-  //   return res(ctx.json({farewell: 'goodbye there'})) // respond using a mocked JSON body
-  // })
-]
+];

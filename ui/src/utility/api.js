@@ -59,7 +59,7 @@ export const register = async (data) => {
       `Status Code: ${response?.status} - ${responseData?.message}`
     );
   }
-
+//   console.log(responseData);
   return responseData;
 };
 
@@ -68,7 +68,7 @@ export const getUserProfile = async (username) => {
   const response = await fetch(`${baseUrl}/user/username/${username}`, {
     method: "GET",
   });
-
+//   console.log(response);
   const responseData = await response.json();
 
   if (!response.ok) {
@@ -85,7 +85,7 @@ export const getUser = async (token) => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,
+      Authorization: `Bearer ${token}`,// the token is a variable which holds the token
     },
   });
 

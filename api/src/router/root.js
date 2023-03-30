@@ -1,6 +1,6 @@
 const root = (app) => {
   app.get('/', (req, res) => {
-    res.json({message: 'Hello Namaste World!'})
+    res.json({message: 'Namaste World!'})
   })
 }
 
