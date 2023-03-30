@@ -4,22 +4,22 @@ import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 
-function BigButton() {
+function ThoughtsButton() {
   return (
     <Fragment>
       <Button
         component={Link}
-        to="/"
+        to="/mythoughts"
         variant="contained"
         size="large"
         sx={{ boxShadow: "3px 2px 7px rgb(0, 0, 0, 0.5)" }}
       >
         <Typography fontWeight="bold" fontSize="24px">
-          Button
+         My Thoughts
         </Typography>
       </Button>
     </Fragment>
   );
 }
 
-export default BigButton;
+export default ThoughtsButton;

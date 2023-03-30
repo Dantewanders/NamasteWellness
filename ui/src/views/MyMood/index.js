@@ -12,7 +12,7 @@ import { CardActionArea } from "@mui/material";
 import { isUserLoggedIn } from "../../utility/utils";
 import JournalContainer from "../../components/JournalContainer";
 import Mood from "../MyMood";
-import BigButton from "../../components/BigButton";
+import MyWellnessButton from "../../components/MyWellnessButton";
 import "./index.css";
 
 function MyMood() {
@@ -89,6 +89,7 @@ function MyMood() {
             rowSpacing={2}
             columnSpacing={2}
             style={{ maxWidth: "950px" }}
+            marginTop="50px"
         >
             <Grid item>
             <Button
@@ -205,7 +206,7 @@ function MyMood() {
             <Typography color='red' fontSize='18px' mb='15px'>
                 {errorMsg}
             </Typography>
-
+            
             <Button
                 variant='contained'
                 color='secondary'
@@ -216,14 +217,15 @@ function MyMood() {
                 Namaste
                 </Typography>
                 
-            </Button>
+            </Button> 
+            
 
             </Grid>
             
             </Grid>
-            <JournalContainer />
+        
         </Fragment>
     )
-}
+}//use the button submit to database and link to MyWellness page
 
 export default MyMood
