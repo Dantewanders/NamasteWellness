@@ -80,17 +80,13 @@ function Navbar() {
   ];
   return (
     <AppBar position="static">
-
       <Container maxWidth="xs">
         <Toolbar disableGutters>
         <img src = {logoImg} sx={{ display: { xs: "" , md: "none" }, mr: 1 }}/>
-                 <Typography
-
-      <Container maxWidth="xl">
+      {/* <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <GamepadIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <GamepadIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
-
             variant="h6"
             noWrap
             component="a"
@@ -228,7 +224,8 @@ function Navbar() {
         </Toolbar>
       </Container>
     </AppBar>
-  );
+    );
 }
+
 
 export default Navbar;
