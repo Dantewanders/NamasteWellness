@@ -15,7 +15,7 @@ import Mood from "../MyMood";
 import BigButton from "../../components/BigButton";
 import "./index.css";
 
-function MyMood() { 
+function MyMood() {
 
     const [Mood, setMood] = useState("")//this is to select my mood
     const [errorMsg, setErrorMsg] = useState("")//this is to display my error message
