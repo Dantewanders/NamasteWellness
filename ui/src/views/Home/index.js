@@ -188,7 +188,7 @@ function Home(props) {
             fontSize="18px"
             mt="20px"
           >
-            Difficulty settings:
+            My Wellness Categories:
           </Typography>
 
           <Box width="800px" mt="10px" ml="20px">

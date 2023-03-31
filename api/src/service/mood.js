@@ -13,18 +13,18 @@ exports.showMoodsByUsername = async (username) => {
   return moods
 }
 
-exports.createmood = async (mood) => {// this is the mood object that is passed in from the router
+// exports.createMood = async (mood) => {// this is the mood object that is passed in from the router
 
-  const responses = mood.responses 
-  delete mood.responses
+//   const responses = mood.responses 
+//   delete mood.responses
 
-  const moodId = await knex('game').insert(game)
+//   const moodId = await knex('mood').insert(mood)
   
-  const results = await Promise.all(responses.map(async (response) => {
-    response.mood_id = moodId
-    return await knex('response').insert(response) 
-    //console.log (response)
-  }))
+//   const results = await Promise.all(responses.map(async (response) => {
+//     response.mood_id = moodId
+//     return await knex('response').insert(response) 
+//     //console.log (response)
+//   }))
 
-  return moodId
-}
+//   return moodId
+// }

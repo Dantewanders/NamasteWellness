@@ -4,7 +4,7 @@ exports.getMoodsByUsername = async (req, res) => {
   
   try {
    
-    const games = await showMoodsByUsername(req.params.username)
+    const moods = await showMoodsByUsername(req.params.username)
     
     res.json(moods)
     

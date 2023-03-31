@@ -10,7 +10,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 import { isUserLoggedIn } from "../../utility/utils";
-import JournalContainer from "../../components/JournalContainer";
 import Mood from "../MyMood";
 import MyWellnessButton from "../../components/MyWellnessButton";
 import "./index.css";
@@ -34,17 +33,13 @@ function MyMood() {
     if (!Mood) {
         return setErrorMsg("Please select your Mood before continuing.");
     }
-    //   console.log(`Mood: ${Mood}`);
+      console.log(`Mood: ${Mood}`);
     setIsChoosing(true)
     }
-    //npm file for emoji library
-    // const emoji = require("emoji-dictionary");
-    // console.log(emoji.getUnicode("smile"));
-
-
+    
     const handleSelectMood = (selected) => {
     setMood(selected)
-    //this is to unselect the mood
+   
     if (Mood === selected) {
         setMood("")
         }//this is to select the mood
@@ -57,7 +52,10 @@ function MyMood() {
         )
     }
   
+//send selected button to the database in the journals table
+// const handleSave = () => {
 
+// }
 
     return (
         <Fragment>

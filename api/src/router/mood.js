@@ -1,9 +1,9 @@
 const { getMoodsByUsername, addMood } = require("../controller/mood");
 const { authenticate } = require("../middleware/authenticate");
 
-const mood = (app) => {
-    app.get('/mood/:username', getMoodsByUsername)
-    app.post('/mood/results', authenticate, addMood)
+const moods = (app) => {
+    app.get('/mymood/:username', getMoodsByUsername)
+    app.post('/mymood/results', authenticate, addMood)
 };
 
-module.exports = mood;
+module.exports = moods
