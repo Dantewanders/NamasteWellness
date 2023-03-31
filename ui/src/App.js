@@ -12,6 +12,8 @@ import MyWellness from "./views/MyWellness";
 import Settings from "./views/Settings";
 import Resources from "./views/Resources";
 import MyMood from "./views/MyMood";
+import MySleep from "./views/MySleep";
+import MyThoughts from "./views/MyThoughts";
 
 function App() {
   return (
@@ -26,7 +28,8 @@ function App() {
             <Route path="/register" element={<RegisterForm />} />
             <Route path="/MyWellness" element={<MyWellness />} />
             <Route path="/MyMood" element={<MyMood />} />
-
+            <Route path="/MySleep" element={<MySleep/>} />
+            <Route path="/MyThoughts" element={<MyThoughts/>} />
             <Route path="/user/settings" element={<Settings />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="*" element={<NotFound />} />

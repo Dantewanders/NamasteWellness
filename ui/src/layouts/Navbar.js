@@ -80,21 +80,21 @@ function Navbar() {
   ];
   return (
     <AppBar position="static">
-      <Container maxWidth="xs">
+      {/* <Container maxWidth="xs"> */}
+        {/* <Toolbar disableGutters> */}
+        {/* <img src = {logoImg} sx={{ display: { xs: "" , md: "none" }, mr: 1 }}/> */}
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
-        <img src = {logoImg} sx={{ display: { xs: "" , md: "none" }, mr: 1 }}/>
-      {/* <Container maxWidth="xl">
-        <Toolbar disableGutters>
-          <GamepadIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
+          <GamepadIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
             component="a"
             href="/"
             sx={{
-              mr: 2,
+              mr: 10,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
+              fontFamily: "script",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
@@ -165,14 +165,14 @@ function Navbar() {
           >
             Namaste Wellness
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" },mr:2 }}>
             {pages.map((page) => (
               <Button
                 component={Link}
                 to={page.path}
                 key={page.label}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "black", display: "block" }}
               >
                 {page.label}
               </Button>
