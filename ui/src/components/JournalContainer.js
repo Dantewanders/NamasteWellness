@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 function JournalContainer () {
     return (
             <div>
-                <h1>My Feelings Today</h1>
+                <h1>My Thoughts Today</h1>
                 
                 <form>
                     <label>
