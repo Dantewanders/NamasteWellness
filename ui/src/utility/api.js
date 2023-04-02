@@ -121,8 +121,8 @@ export const updatePassword = async (token, data) => {
   return responseData;
 };
 
-export const updateMood = async (token, data) => {
-  const response = await fetch(`${baseUrl}/mood/new`, {
+export const submitJournal = async (token, data) => {
+  const response = await fetch(`${baseUrl}/journal/new`, {
     method: "post",
     headers: {
       "Content-Type": "application/json",

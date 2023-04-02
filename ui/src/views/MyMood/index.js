@@ -10,77 +10,73 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 import { isUserLoggedIn } from "../../utility/utils";
-import MyWellnessButton from "../../components/MyWellnessButton";
 import "./index.css";
 
 function MyMood() {
+  const [Mood, setMood] = useState(""); //this is to select my mood
+  const [errorMsg, setErrorMsg] = useState(""); //this is to display my error message
+  const [isChoosing, setIsChoosing] = useState(false);
 
-    const [Mood, setMood] = useState("")//this is to select my mood
-    const [errorMsg, setErrorMsg] = useState("")//this is to display my error message
-    const [isChoosing, setIsChoosing] = useState(false)
+  const navigate = useNavigate();
+  //this checks if the user is logged in
 
-    const navigate = useNavigate()
-    //this checks if the user is logged in
-
-    useEffect(() => {
+  useEffect(() => {
     if (!isUserLoggedIn()) {
-        navigate("/login");
+      navigate("/login");
     }
-    }, []);
+  }, []);
 
-    const handleStart = () => {
-        if (!Mood) {
-            return setErrorMsg("Please select your Mood before continuing.");
-        }
-
-        navigate("/mysleep");
-        
-        setIsChoosing(true)
+  const handleStart = () => {
+    if (!Mood) {
+      return setErrorMsg("Please select your Mood before continuing.");
     }
-    
-    const handleSelectMood = (selected) => {
-    setMood(selected)
-   
+
+    localStorage.setItem("Mood", Mood);
+
+    navigate("/mysleep");
+
+    setIsChoosing(true);
+  };
+
+  const handleSelectMood = (selected) => {
+    setMood(selected);
+
     if (Mood === selected) {
-        setMood("")
-        }//this is to select the mood
-    }
-    if (isChoosing) {
-        return (
-        <MyMood 
-            Mood={Mood} //this is to pass the mood to the next page
-            />
-        )
-    }
-  
-//send selected button to the database in the journals table
-// const handleSave = () => {
-
-// }
-
+      setMood("");
+    } //this is to select the mood
+  };
+  if (isChoosing) {
     return (
-        <Fragment>
-            <Grid
+      <MyMood
+        Mood={Mood} //this is to pass the mood to the next page
+      />
+    );
+  }
+
+  
+
+ 
+
+  return (
+    <Fragment>
+      <Grid
+        container
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Grid item mt="20px">
+          <Grid
             container
             direction="column"
             justifyContent="center"
             alignItems="center"
-        >
-
-            <Grid item mt='20px'>
-            <Grid
-                container
-                direction="column"
-                justifyContent="center"
-                alignItems="center"
-                >
-
-                <Typography align="center" fontSize="32px" fontWeight="bold">
-                How do feel today?
+          >
+            <Typography align="center" fontSize="32px" fontWeight="bold">
+              How do feel today?
             </Typography>
-
-        </Grid>
-        <Grid
+          </Grid>
+          <Grid
             container
             direction="row"
             justifyContent="center"
@@ -89,142 +85,131 @@ function MyMood() {
             columnSpacing={2}
             style={{ maxWidth: "950px" }}
             marginTop="50px"
-        >
+          >
             <Grid item>
-            <Button
+              <Button
                 variant="contained"
                 onClick={() => handleSelectMood("Happy")}
                 color={Mood === "Happy" ? "success" : "primary"}
-            >
+              >
                 <Typography fontWeight="bold">Happy</Typography>
-            </Button>
+              </Button>
             </Grid>
             <Grid item>
-            <Button
+              <Button
                 variant="contained"
                 onClick={() => handleSelectMood("Positive")}
                 color={Mood === "Positive" ? "success" : "primary"}
-            >
+              >
                 <Typography fontWeight="bold">Positive</Typography>
-            </Button>
+              </Button>
             </Grid>
             <Grid item>
-            <Button
+              <Button
                 variant="contained"
                 onClick={() => handleSelectMood("Reflective")}
                 color={Mood === "Reflective" ? "success" : "primary"}
-            >
+              >
                 <Typography fontWeight="bold">Reflective</Typography>
-            </Button>
+              </Button>
             </Grid>
             <Grid item>
-            <Button
+              <Button
                 variant="contained"
                 onClick={() => handleSelectMood("Irritated")}
                 color={Mood === "Irritated" ? "success" : "primary"}
-            >
+              >
                 <Typography fontWeight="bold">Irritated</Typography>
-            </Button>
+              </Button>
             </Grid>
             <Grid item>
-            <Button
+              <Button
                 variant="contained"
                 onClick={() => handleSelectMood("Hurt")}
                 color={Mood === "Hurt" ? "success" : "primary"}
-            >
+              >
                 <Typography fontWeight="bold">Hurt</Typography>
-            </Button>
+              </Button>
             </Grid>
             <Grid item>
-            <Button
+              <Button
                 variant="contained"
                 onClick={() => handleSelectMood("Ashamed")}
                 color={Mood === "Ashamed" ? "success" : "primary"}
-            >
+              >
                 <Typography fontWeight="bold">Ashamed</Typography>
-            </Button>
+              </Button>
             </Grid>
             <Grid item>
-            <Button
+              <Button
                 variant="contained"
                 onClick={() => handleSelectMood("Sad")}
                 color={Mood === "Sad" ? "success" : "primary"}
-            >
+              >
                 <Typography fontWeight="bold">Sad</Typography>
-            </Button>
+              </Button>
             </Grid>
             <Grid item>
-            <Button
+              <Button
                 variant="contained"
                 onClick={() => handleSelectMood("Loved")}
                 color={Mood === "Loved" ? "success" : "primary"}
-            >
+              >
                 <Typography fontWeight="bold">Loved</Typography>
-            </Button>
+              </Button>
             </Grid>
             <Grid item>
-            <Button
+              <Button
                 variant="contained"
                 onClick={() => handleSelectMood("Optimistic")}
                 color={Mood === "Optimistic" ? "success" : "primary"}
-            >
+              >
                 <Typography fontWeight="bold">Optimistic</Typography>
-            </Button>
+              </Button>
             </Grid>
             <Grid item>
-            <Button
+              <Button
                 variant="contained"
                 onClick={() => handleSelectMood("Angry")}
                 color={Mood === "Angry" ? "success" : "primary"}
-            >
+              >
                 <Typography fontWeight="bold">Angry</Typography>
-            </Button>
+              </Button>
             </Grid>
             <Grid item>
-            <Button
+              <Button
                 variant="contained"
                 onClick={() => handleSelectMood("Calm")}
                 color={Mood === "Calm" ? "success" : "primary"}
-            >
+              >
                 <Typography fontWeight="bold">Calm</Typography>
-            </Button>
+              </Button>
             </Grid>
             <Grid item>
-            <Button
+              <Button
                 variant="contained"
                 onClick={() => handleSelectMood("Bored")}
                 color={Mood === "Bored" ? "success" : "primary"}
-            >
+              >
                 <Typography fontWeight="bold">Bored</Typography>
-            </Button>
+              </Button>
             </Grid>
+          </Grid>
         </Grid>
-        </Grid>
-        <Grid align='center' mt='40px'>
+        <Grid align="center" mt="40px">
+          <Typography color="red" fontSize="18px" mb="15px">
+            {errorMsg}
+          </Typography>
 
-            <Typography color='red' fontSize='18px' mb='15px'>
-                {errorMsg}
+          <Button variant="contained" color="secondary" onClick={handleStart}>
+            <Typography fontWeight="bold" fontSize="15px">
+              Continue Journal
             </Typography>
-            
-            <Button
-                variant='contained'
-                color='secondary'
-                onClick={handleStart}
-            >
+          </Button>
+        </Grid>
+      </Grid>
+    </Fragment>
+  );
+} //use the namaste button to navigate to mySleep and store the mood choice locally
 
-                <Typography fontWeight='bold' fontSize='15px'>
-                Namaste
-                </Typography>
-                
-            </Button> 
-            
-
-            </Grid>
-            
-            </Grid>
-        
-        </Fragment>
-    )
-}//use the button submit to database and link to MyWellness page
-
-export default MyMood
+export default MyMood;
