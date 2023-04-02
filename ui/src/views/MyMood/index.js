@@ -10,7 +10,6 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { CardActionArea } from "@mui/material";
 import { isUserLoggedIn } from "../../utility/utils";
-import Mood from "../MyMood";
 import MyWellnessButton from "../../components/MyWellnessButton";
 import "./index.css";
 
@@ -30,11 +29,13 @@ function MyMood() {
     }, []);
 
     const handleStart = () => {
-    if (!Mood) {
-        return setErrorMsg("Please select your Mood before continuing.");
-    }
-      console.log(`Mood: ${Mood}`);
-    setIsChoosing(true)
+        if (!Mood) {
+            return setErrorMsg("Please select your Mood before continuing.");
+        }
+
+        navigate("/mysleep");
+        
+        setIsChoosing(true)
     }
     
     const handleSelectMood = (selected) => {

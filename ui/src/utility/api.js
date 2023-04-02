@@ -122,13 +122,15 @@ export const updatePassword = async (token, data) => {
 };
 
 export const updateMood = async (token, data) => {
-  const response = await fetch(`${baseUrl}/mood/results`, {
+  const response = await fetch(`${baseUrl}/mood/new`, {
     method: "post",
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify(data),
-    });
-  }
+  });
+
+  return response;
+}
 
