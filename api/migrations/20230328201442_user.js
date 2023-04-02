@@ -8,7 +8,7 @@ exports.up = function (knex) {
     table.string("email").notNullable();
     table.string("username").notNullable().unique();
     table.string("password").notNullable();
-    table.timestamp("dateCreated").notNullable().defaultTo(knex.fn.now());
+    table.date("dateCreated").notNullable().defaultTo(knex.raw('(CURRENT_DATE())'));
   });
 };
 

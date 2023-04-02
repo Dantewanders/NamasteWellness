@@ -6,7 +6,7 @@ exports.up = function (knex) {
   return knex.schema.createTable("quotes", function (table) {
     table.increments("quotes_id").primary().unsigned().unique().notNullable();
     table.text("quote").notNullable();
-    table.timestamp("dateCreated").notNullable().defaultTo(knex.fn.now());
+    table.date("dateCreated").notNullable().defaultTo(knex.raw('(CURRENT_DATE())'));
   });
 };
 
@@ -15,5 +15,5 @@ exports.up = function (knex) {
  * @returns { Promise<void> }
  */
 exports.down = function (knex) {
-  return knex.schema.dropTableIfExists("user");
+  return knex.schema.dropTableIfExists("quotes");
 };

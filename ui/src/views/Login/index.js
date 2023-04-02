@@ -25,6 +25,8 @@ function LoginForm() {
         password: passwordValue,
       });
 
+      console.log('login response', tokenValue);
+
       // console.log('token value:', tokenValue.token)
 
       setToken(tokenValue.token);
