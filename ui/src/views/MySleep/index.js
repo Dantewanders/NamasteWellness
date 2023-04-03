@@ -85,15 +85,9 @@ function MySleep() {
       setSleep("");
     } //this is to select the sleep duration
   };
-  // if (isChoosing) {
-  //   return (
-  //     <MySleep
-  //       Sleep={Sleep} //this is to pass the sleep choice to the next page
-  //     />
-  //   );
-  // }
+ 
   const handleSelectEnergy = (event, value) => {
-    if (value > 0 && value < 50) {
+    if (value > 0 && value < 50) { //this is to select the energy level with a value 0-49 of Low energy
       setEnergy("Low");
     } else if (value === 50) {
       setEnergy("Medium");
@@ -109,7 +103,7 @@ function MySleep() {
     );
   }
   function valuetext(value) {
-    return `${value}°C`;
+    return `${value} Hours`;
   }
   return (
     <Fragment>

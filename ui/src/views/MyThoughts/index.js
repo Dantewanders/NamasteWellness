@@ -14,11 +14,10 @@ function MyThoughts() {
         My Thoughts
       </Typography>
       
-      <JournalContainer />
+      <JournalContainer /> 
       
       <BigButton/>
     </Fragment>
   );
-}
-
+}//this is to display the journal container in components
 export default MyThoughts;

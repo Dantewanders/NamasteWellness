@@ -121,7 +121,7 @@ export const updatePassword = async (token, data) => {
   return responseData;
 };
 
-export const submitJournal = async (token, data) => {
+export const submitJournal = async (token, data) => { // token is the token from local storage
   const response = await fetch(`${baseUrl}/journal/new`, {
     method: "post",
     headers: {

@@ -26,16 +26,16 @@ function MyMood() {
     }
   }, []);
 
-  const handleStart = () => {
+  const handleStart = () => { //this is to start the process
     if (!Mood) {
       return setErrorMsg("Please select your Mood before continuing.");
     }
 
-    localStorage.setItem("Mood", Mood);
+    localStorage.setItem("Mood", Mood); //this is to store the mood in the local storage
 
-    navigate("/mysleep");
+    navigate("/mysleep");//this is to navigate to the mysleep page
 
-    setIsChoosing(true);
+    setIsChoosing(true); 
   };
 
   const handleSelectMood = (selected) => {
@@ -52,11 +52,6 @@ function MyMood() {
       />
     );
   }
-
-  
-
- 
-
   return (
     <Fragment>
       <Grid

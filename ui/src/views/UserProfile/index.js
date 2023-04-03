@@ -25,7 +25,7 @@ function UserProfile() {
       .catch((error) => console.log(error));
   }, [username]);
 
-  return <div>Hello</div>;
+  return <div>Hello Profile</div>;
 }
 
 export default UserProfile;

@@ -4,7 +4,7 @@ exports.getJournalsByUsername = async (req, res) => {
   
   try {
    
-    const moods = await showJournalsByUsername(req.params.username)
+    const moods = await showJournalsByUsername(req.params.username) 
     
     res.json(moods)
     
@@ -20,8 +20,8 @@ exports.addJournal = async (req, res) => {
 
   console.log(req.body)
 
-  const journalPayload = {
-    ...req.body,
+  const journalPayload = {// payload offers a way to add data to carry over to the service
+    ...req.body, // spread operator
     user_id: req.userId
   }
 
