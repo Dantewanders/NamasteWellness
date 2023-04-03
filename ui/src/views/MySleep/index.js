@@ -9,8 +9,7 @@ import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import MuiInput from "@mui/material/Input";
 import sleep from "../../Images/sleep.jpg";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
+
 
 
 
@@ -36,9 +35,9 @@ function MySleep() {
 
   const [value, setValue] = useState(30);
 
-  const handleSliderChange = (event, newValue) => {
-    setValue(newValue);
-  };
+  // const handleSliderChange = (event, newValue) => {
+  //   setValue(newValue);
+  // };
 
   const handleInputChange = (event) => {
     setValue(event.target.value === "" ? "" : Number(event.target.value));
@@ -106,9 +105,9 @@ function MySleep() {
       />
     );
   }
-  function valuetext(value) {
-    return `${value} Hours`;
-  }
+  // function valuetext(value) {
+  //   return `${value} Hours`;
+  // }
   return (
     <Fragment>
       <Grid m="50px">
@@ -158,7 +157,7 @@ function MySleep() {
             and influence our feelings of energy and our energy balance.
           </Typography>
           <Typography>
-          <img src={sleep} alt="sleep image" />
+          <img src={sleep} alt="sleep" />
           </Typography>
         </Grid>
 

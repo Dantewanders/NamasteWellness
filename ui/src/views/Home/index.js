@@ -2,9 +2,7 @@ import React, { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { Grid, Typography } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
-import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
-import CardContent from "@mui/material/CardContent";
 import MyWellnessButton from "../../components/MyWellnessButton";
 import "./index.css";
 
