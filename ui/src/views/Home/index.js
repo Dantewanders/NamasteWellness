@@ -13,17 +13,17 @@ function Home(props) {
     <Fragment>
       <Grid m="50px">
         <Grid item>
-          <Typography variant="h5" fontWeight="bold">
-            Monitoring your mood
+          <Typography variant="h5" fontWeight="bold" mb= "20px">
+            Monitoring your mental health
           </Typography>
 
           <Typography variant="body1">
-            Understanding your mood helps you manage your emotions and feel
-            better. If you are more aware of your moods, you may be able to
+            Understanding your mental health helps you manage your emotions and feel
+            better. If you are more aware of your mental health, you may be able to
             better manage your lifestyle, make informed decisions, prevent or
             avoid triggers, and work towards a better quality of life. The trick
             is to watch for changes in your mood, particularly any very high
-            swings or very low dips. Self-monitoring your mood with Namaste
+            swings or very low dips. Self-monitoring your mental health with Namaste
             Wellness takes hardly any time. And as you make it part of your
             daily routine you'll find it becomes very simple. Namaste Wellness
             provides graphical analysis of your posts over time, helping to find
@@ -32,7 +32,7 @@ function Home(props) {
         </Grid>
 
         <Grid item>
-          <Typography variant="h5" fontWeight="bold" mt="20px">
+          <Typography variant="h5" fontWeight="bold" mt="20px" mb="20px">
             Overview
           </Typography>
 
@@ -48,7 +48,7 @@ function Home(props) {
         </Grid>
 
         <Grid item>
-          <Typography variant="h5" fontWeight="bold" mt="20px">
+          <Typography variant="h5" fontWeight="bold" mt="20px" mb="20px">
             What affects your mood?
           </Typography>
 
@@ -173,10 +173,11 @@ function Home(props) {
 
           <Typography
             component={Link}
-            to="/MyMood"
+            to="/MyWellness"
             variant="subtitle"
-            color="grey"
+            color="Black"
             className="link"
+            
           >
           Namaste Wellness can help in a simple yet intuitive way.
           Let us help monitor your mental health in various ways, for a personal insight or to share with your health care professional.
