@@ -1,7 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
 import { useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { isUserLoggedIn } from "../../utility/utils";
 import { Typography } from "@mui/material";
 import "./index.css";

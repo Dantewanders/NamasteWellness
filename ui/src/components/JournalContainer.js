@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { isUserLoggedIn, getToken } from "../utility/utils";
+import { getToken } from "../utility/utils";
 import { submitJournal } from "../utility/api";
 
 function JournalContainer() {

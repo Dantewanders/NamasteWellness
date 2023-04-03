@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { updatePassword } from "../../utility/api";
 import Button from "@mui/material/Button";
-import { isUserLoggedIn, getToken } from "../../utility/utils";
+import { getToken } from "../../utility/utils";
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 

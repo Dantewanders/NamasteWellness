@@ -1,9 +1,6 @@
 import React from "react";
 import { Fragment } from "react";
-import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import "./index.css";
 
 function Resources() {

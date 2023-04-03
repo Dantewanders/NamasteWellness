@@ -24,12 +24,7 @@ const theme = createTheme({
     },
   },
 
-  typography: {
-    htmlFontSize: 14,
-    button: {
-      fontSize: 15,
-    },
-  },
+  
 });
 
 const ThemeContextProvider = (props) => {

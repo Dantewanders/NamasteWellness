@@ -1,8 +1,5 @@
 import { rest } from "msw";
 
-// ** mock data JSON
-import { getUserProfile } from "./data/getUserProfile";
-
 // Set URL to mock
 const baseUrl = process.env.REACT_APP_API_URL || "http://localhost:9000";
 
