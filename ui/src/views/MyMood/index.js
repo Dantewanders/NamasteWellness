@@ -59,16 +59,32 @@ function MyMood() {
         direction="column"
         justifyContent="center"
         alignItems="center"
+        marginBottom="20px"
       >
-        <Grid item mt="20px">
-          <Grid
-            container
-            direction="column"
-            justifyContent="center"
-            alignItems="center"
-          >
-            <Typography align="center" fontSize="32px" fontWeight="bold">
-              How do feel today?
+        <Grid item 
+        mt="20px"
+        mb="20px"
+        >
+        <Typography variant="h5" fontWeight="bold">
+        Monitoring your Mood
+      </Typography>
+
+      <Typography variant="body1">
+      Understanding your moods helps you manage them and feel better faster.
+      If you are more aware of your moods, you may be able to better manage your lifestyle choices, 
+      make informed health decisions, prevent or avoid triggers of negative moods, and work towards a better quality of life.
+      The trick is to watch for changes in your mood, particularly any very high swings or very low dips (which may mean you need help to even out your emotional state). 
+      Self-monitoring is free and takes hardly any time. And it becomes easier as you make it part of your daily routine.
+      </Typography>
+        < Typography > 
+        <p>
+          
+        </p>
+        </Typography>
+          <Grid           
+          >         
+            <Typography align="center" fontSize="25px" fontWeight="bold">
+              How do You feel today?
             </Typography>
           </Grid>
           <Grid
@@ -76,10 +92,11 @@ function MyMood() {
             direction="row"
             justifyContent="center"
             alignItems="center"
-            rowSpacing={2}
-            columnSpacing={2}
-            style={{ maxWidth: "950px" }}
-            marginTop="50px"
+            rowSpacing={5}
+            columnSpacing={9}
+            style={{ maxWidth: "1250px" }}
+            marginTop="20px"
+            marginBottom="50px"
           >
             <Grid item>
               <Button

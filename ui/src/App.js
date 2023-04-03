@@ -14,10 +14,20 @@ import Resources from "./views/Resources";
 import MyMood from "./views/MyMood";
 import MySleep from "./views/MySleep";
 import MyThoughts from "./views/MyThoughts";
+import namaste_BG from './Images/namaste_BG.jpg'
+
+
+
 
 function App() {
   return (
+   
     <div className="App">
+      {/* <div 
+     className="background-image"
+     style={{ backgroundImage: namaste_BG }}
+     >
+     </div> */}
       <ThemeContextProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -36,8 +46,10 @@ function App() {
           </Route>
         </Routes>
       </ThemeContextProvider>
+           
+  
     </div>
-  );
-}
+    
+)}
 
 export default App;

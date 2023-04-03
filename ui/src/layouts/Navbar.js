@@ -16,6 +16,9 @@ import { Link } from "react-router-dom";
 import { isUserLoggedIn, getToken } from "../utility/utils";
 import { getUser } from "../utility/api";
 import logoImg from "../Images/Lotus.svg";
+import SpaIcon from '@mui/icons-material/Spa';
+import SvgIcon from '@mui/material/SvgIcon';
+
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -62,26 +65,22 @@ function Navbar() {
       path: "/user/settings",
     },
     {
-      label: "Logout",
-      path: "/user/logout",
-    },
-  ];
-
-  const pages = [
-    {
-      label: "My Wellness",
-      path: "/MyWellness",
-    },
-    {
       label: "Resources",
       path: "/resources",
     },
+    {
+      label: "Logout",
+      path: "/user/logout",
+    },
+    
   ];
+
+  const pages = [  ];
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <GamepadIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <SpaIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -90,7 +89,7 @@ function Navbar() {
             sx={{
               mr: 10,
               display: { xs: "none", md: "flex" },
-              fontFamily: "script",
+              fontFamily: "Roboto",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
@@ -142,7 +141,7 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-          <GamepadIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <SpaIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
