@@ -83,16 +83,16 @@ function MyMood() {
             </Typography>
           </Grid>
           <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-            rowSpacing={5}
-            columnSpacing={9}
-            style={{ maxWidth: "1250px" }}
-            marginTop="20px"
-            marginBottom="50px"
-          >
+           container
+           direction="row"
+           justifyContent="center"
+           alignItems="center"
+           rowSpacing={5}
+           columnSpacing={10}
+           style={{ maxWidth: "1500px" }}
+           marginTop="20px"
+           marginBottom="50px"
+     >
             <Grid item>
               <Button
                 variant="contained"

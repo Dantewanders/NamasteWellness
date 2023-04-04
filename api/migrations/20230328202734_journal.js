@@ -7,7 +7,7 @@ exports.up = function (knex) {
     table.increments("journal_id").primary().unsigned().unique().notNullable();
     table.string("mood").notNullable();
     table.string("energy").notNullable();
-    table.text("thoughts");
+    table.text("thoughts").notNullable();
     table.integer("sleepDuration").notNullable();
     table.date("dateCreated").notNullable().defaultTo(knex.raw('(CURRENT_DATE())'));
     table

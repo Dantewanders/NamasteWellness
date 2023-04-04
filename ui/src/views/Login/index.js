@@ -1,7 +1,7 @@
 import { Card, CardContent, Grid, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import GamepadIcon from "@mui/icons-material/Gamepad";
+import SpaIcon from '@mui/icons-material/Spa';
 import Box from "@mui/material/Box";
 import React, { Fragment } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -56,7 +56,7 @@ function LoginForm() {
           }}
         >
           <CardContent sx={{ display: "grid", margin: "20px" }}>
-            <GamepadIcon
+            <SpaIcon
               sx={{ display: "flex", justifySelf: "center", color: "#42a5f5" }}
             />
             <Typography

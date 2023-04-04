@@ -27,7 +27,7 @@ function JournalContainer() {
     <div>
       <h1>My Thoughts Today</h1>
 
-      <form onSubmit={handleSubmitJournal}> //
+      <form onSubmit={handleSubmitJournal}>
         <label> 
           Journal Entry:
           <input

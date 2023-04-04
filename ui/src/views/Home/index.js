@@ -209,7 +209,7 @@ function Home(props) {
           <Typography variant="body1">See how it works!</Typography>
         </Box>
 
-        <Box align="center">
+        {/* <Box align="center">
           <Box
             component="img"
             sx={{
@@ -221,7 +221,7 @@ function Home(props) {
             alt="Example gameplay"
             src="/screenshot.png"
           />
-        </Box>
+        </Box> */}
 
         <Grid
           container

@@ -210,7 +210,9 @@ function MySleep() {
               </Grid>
             </Grid>
           </Box>
-          <Box sx={{ width: 300 }} mb="25px">
+          
+            
+          <Box sx={{ width: 300 }} mt= "45px" mb="45px">
             <Typography id="input-slider" gutterBottom>
               Energy Level
             </Typography>
