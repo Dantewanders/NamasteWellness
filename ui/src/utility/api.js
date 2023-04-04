@@ -134,3 +134,26 @@ export const submitJournal = async (token, data) => { // token is the token from
   return response;
 }
 
+export const getMyJournal = async (token) => {
+  const response = await fetch(`${baseUrl}/journal/today`, {
+    method: "get",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  return response;
+}
+
+export const getsQuote = async () => {
+  const response = await fetch(`${baseUrl}/quote/today`, {
+    method: "get",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+
+  return response;
+}
+

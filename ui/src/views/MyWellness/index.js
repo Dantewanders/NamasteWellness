@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Fragment, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { isUserLoggedIn } from "../../utility/utils";
@@ -13,15 +13,51 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
+import { getMyJournal, getsQuote } from "../../utility/api";
+import { getToken } from "../../utility/utils";
 
 function MyWellness() {
+  const [sleep, setSleep] = useState("");
+  const [mood, setMood] = useState("");
+  const [thoughts, setThoughts] = useState("");
+  const [energy, setEnergy] = useState("");
+  const [quote, setQuote] = useState("");
+  // const [author, setAuthor] = useState("");
   const navigate = useNavigate();
   //this checks if the user is logged in
+
+  const getJournal = async () => {
+    const token = getToken();
+    const response = await getMyJournal(token);
+    const result = await response.json();
+    setSleep(result[0].sleepDuration);
+    setMood(result[0].mood);
+    setThoughts(result[0].thoughts);
+    setEnergy(result[0].energy);
+   
+  };
+
+  const getQuote = async () => {
+    const response = await getsQuote();
+    const result = await response.json();
+    setQuote(result[0].quote);
+    
+    console.log(result);
+  };
+  // const getAuthor = async () => {
+  //   const response = await getsAuthor();
+  //   const result = await response.json();
+  //   setQuote(result[0].author);
+    
+  //   console.log(result);
+  // };
 
   useEffect(() => {
     if (!isUserLoggedIn()) {
       navigate("/login");
     }
+    getJournal();
+    getQuote();
   }, []);
   const bull = (
     <Box
@@ -33,85 +69,72 @@ function MyWellness() {
   const quoteCard = (
     <Fragment>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" textAlign={"center"}gutterBottom>
           Quote of the Day
         </Typography>
-        <Typography variant="h5" component="div">
-          test text
+        <Typography variant="h5" component="div" textAlign={"center"}>
+          {quote}
         </Typography>
 
         <Typography variant="body2">
-          Body 2 text
+          
           <br />
-          {'"text"'}
+          {"Author"}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Fragment>
   );
   const sleepCard = (
     <Fragment>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        <Typography sx={{ fontSize: 14 }} color="text.secondary" textAlign={"center"}gutterBottom>
           Your Sleep
         </Typography>
-        <Typography variant="h5" component="div">
-          test text
+        <Typography variant="h5" component="div" textAlign={"center"}>
+          {sleep}
         </Typography>
 
-        <Typography variant="body2">
-          Body 2 text
+        <Typography variant="body2"textAlign={"center"}>
+          Hours of Sleep
           <br />
-          {'"text"'}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Fragment>
   );
   const moodCard = (
     <Fragment>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+      <Typography sx={{ fontSize: 14 }} color="text.secondary" textAlign={"center"}gutterBottom>
           Your Mood
         </Typography>
-        <Typography variant="h5" component="div">
-          test text
+        <Typography variant="h5" component="div" textAlign={"center"}>
+          {mood}
         </Typography>
 
-        <Typography variant="body2">
+        {/* <Typography variant="body2">
           Body 2 text
           <br />
           {'"text"'}
-        </Typography>
+        </Typography> */}
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Fragment>
   );
   const energyCard = (
     <Fragment>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+      <Typography sx={{ fontSize: 14 }} color="text.secondary" textAlign={"center"}gutterBottom>
           Your Energy
         </Typography>
-        <Typography variant="h5" component="div">
-          test text
+        <Typography variant="h5" component="div"textAlign={"center"}>
+          {energy}
         </Typography>
 
-        <Typography variant="body2">
+        {/* <Typography variant="body2">
           Body 2 text
           <br />
           {'"text"'}
-        </Typography>
+        </Typography> */}
       </CardContent>
-      <CardActions>
-        <Button size="small">Learn More</Button>
-      </CardActions>
     </Fragment>
   );
   return (

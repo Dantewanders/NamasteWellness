@@ -1,4 +1,4 @@
-const { showJournalsByUsername, createJournal} = require('../service/journal')
+const { showJournalsByUsername, createJournal, getuserJournalForToday} = require('../service/journal')
 
 exports.getJournalsByUsername = async (req, res) => {
   
@@ -36,4 +36,15 @@ exports.addJournal = async (req, res) => {
     res.status(500).send("Internal Server Error")
   }
 
+}
+
+exports.getUserJournalForToday = async (req, res) => {
+  try {
+    console.log("i got called")
+    const journal = await getuserJournalForToday(req.userId);
+    res.json(journal);
+  } catch (error) {
+    console.log(error)
+    res.status(500).send("Internal Server Error", error)
+  }
 }
