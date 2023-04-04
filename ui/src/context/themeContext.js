@@ -7,7 +7,7 @@ const theme = createTheme({
       main: "#bed4ad",
     },
     secondary: {
-      main: "#f50057",
+      main: "#ffb300",
     },
     info: {
       main: "#052d46",
@@ -21,6 +21,7 @@ const theme = createTheme({
     htmlFontSize: 14,
     button: {
       fontSize: 15,
+      color:"white",
     },
   },
 

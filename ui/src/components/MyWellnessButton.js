@@ -15,7 +15,7 @@ function MyWellnessButton() {
         sx={{ boxShadow: "3px 2px 7px rgb(0, 0, 0, 0.5)" }}
       >
         <Typography fontWeight="bold" fontSize="24px">
-         My Wellness
+         Namaste
         </Typography>
       </Button>
     </Fragment>

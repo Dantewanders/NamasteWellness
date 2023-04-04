@@ -5,3 +5,12 @@
   .link:hover {
     text-decoration: underline;
   }
+
+  .feeling {
+    display: flex;
+    align-items: center;
+  }
+
+  .feeling-icon {
+    padding-top: 10px;
+  }

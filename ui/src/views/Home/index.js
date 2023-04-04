@@ -11,26 +11,27 @@ function Home(props) {
     <Fragment>
       <Grid m="50px">
         <Grid item>
-          <Typography variant="h5" fontWeight="bold" mb= "20px">
+          <Typography variant="h5" fontWeight="bold" mb="20px">
             Monitoring your mental health
           </Typography>
 
           <Typography variant="body1">
-            Understanding your mental health helps you manage your emotions and feel
-            better. If you are more aware of your mental health, you may be able to
-            better manage your lifestyle, make informed decisions, prevent or
-            avoid triggers, and work towards a better quality of life. The trick
-            is to watch for changes in your mood, particularly any very high
-            swings or very low dips. Self-monitoring your mental health with Namaste
-            Wellness takes hardly any time. And as you make it part of your
-            daily routine you'll find it becomes very simple. Namaste Wellness
-            provides graphical analysis of your posts over time, helping to find
-            and identify patterns and to help you focus on what matters.
+            Understanding your mental health helps you manage your emotions and
+            feel better. If you are more aware of your mental health, you may be
+            able to better manage your lifestyle, make informed decisions,
+            prevent or avoid triggers, and work towards a better quality of
+            life. The trick is to watch for changes in your mood, particularly
+            any very high swings or very low dips. Self-monitoring your mental
+            health with Namaste Wellness takes hardly any time. And as you make
+            it part of your daily routine you'll find it becomes very simple.
+            Namaste Wellness provides graphical analysis of your posts over
+            time, helping to find and identify patterns and to help you focus on
+            what matters.
           </Typography>
         </Grid>
 
         <Grid item>
-          <Typography variant="h5" fontWeight="bold" mt="20px" mb="20px">
+          <Typography variant="h6" fontWeight="bold" mt="20px" mb="20px">
             Overview
           </Typography>
 
@@ -46,20 +47,11 @@ function Home(props) {
         </Grid>
 
         <Grid item>
-          <Typography variant="h5" fontWeight="bold" mt="20px" mb="20px">
+          <Typography variant="h6" fontWeight="bold" mt="20px" mb="5px">
             What affects your mood?
           </Typography>
 
-          <Typography
-            variant="body1"
-            fontWeight="bold"
-            fontSize="18px"
-            mt="3px"
-          >
-            Categories:
-          </Typography>
-
-          <Box width="400px">
+          <Box width="600px">
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1 }} mt="3px">
               <Grid item xs={6}>
                 <ListItem sx={{ display: "list-item" }}>Sleep</ListItem>
@@ -113,13 +105,13 @@ function Home(props) {
           <Typography
             variant="body1"
             fontWeight="bold"
-            fontSize="18px"
+            fontSize="20px"
             mt="20px"
           >
             Possible causes of a negative mood may include:
           </Typography>
 
-          <Box width="400px">
+          <Box width="600px">
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1 }} mt="3px">
               <Grid item xs={6}>
                 <ListItem sx={{ display: "list-item" }}>Poor Sleep</ListItem>
@@ -169,16 +161,12 @@ function Home(props) {
             </Grid>
           </Box>
 
-          <Typography
-            component={Link}
-            to="/MyWellness"
-            variant="subtitle"
-            color="Black"
-            className="link"
-            
-          >
-          Namaste Wellness can help in a simple yet intuitive way.
-          Let us help monitor your mental health in various ways, for a personal insight or to share with your health care professional.
+          <Typography textAlign="center" padding={5}>
+            <h5>
+              Namaste Wellness can help in a simple yet intuitive way. Let us
+              help monitor your mental health, for a personal insight or to
+              share with your health care professional.
+            </h5>
           </Typography>
 
           <Typography
@@ -187,7 +175,7 @@ function Home(props) {
             fontSize="18px"
             mt="20px"
           >
-            My Wellness Categories:
+            My Wellness Journals:
           </Typography>
 
           <Box width="800px" mt="10px" ml="20px">
@@ -197,6 +185,9 @@ function Home(props) {
 
             <Grid item xs={12}>
               <ListItem sx={{ display: "list-item" }}>Sleep</ListItem>
+            </Grid>
+            <Grid item xs={12}>
+              <ListItem sx={{ display: "list-item" }}>Energy</ListItem>
             </Grid>
 
             <Grid item xs={12}>
@@ -209,7 +200,7 @@ function Home(props) {
           <Typography variant="body1">See how it works!</Typography>
         </Box>
 
-        {/* <Box align="center">
+        <Box align="center">
           <Box
             component="img"
             sx={{
@@ -218,10 +209,10 @@ function Home(props) {
               boxShadow: "3px 2px 7px rgb(0, 0, 0, 0.3)",
               borderRadius: "15px",
             }}
-            alt="Example gameplay"
-            src="/screenshot.png"
+            alt="Namaste Wellness Screenshot"
+            src="../../Images/NamasteScreenshot.png"
           />
-        </Box> */}
+        </Box>
 
         <Grid
           container

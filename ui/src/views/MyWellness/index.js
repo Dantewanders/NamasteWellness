@@ -9,9 +9,7 @@ import SleepButton from "../../components/SleepButton";
 import ThoughtsButton from "../../components/ThoughtsButton";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import { getMyJournal, getsQuote } from "../../utility/api";
 import { getToken } from "../../utility/utils";
@@ -19,38 +17,35 @@ import { getToken } from "../../utility/utils";
 function MyWellness() {
   const [sleep, setSleep] = useState("");
   const [mood, setMood] = useState("");
-  const [thoughts, setThoughts] = useState("");
+  // const [thoughts, setThoughts] = useState("");
   const [energy, setEnergy] = useState("");
   const [quote, setQuote] = useState("");
-  // const [author, setAuthor] = useState("");
+  const [author, setAuthor] = useState("");
+  // const [dateCreated, setDateCreated] = useState("");
   const navigate = useNavigate();
-  //this checks if the user is logged in
+  
 
   const getJournal = async () => {
     const token = getToken();
     const response = await getMyJournal(token);
     const result = await response.json();
+    console.log("res", result);
+    // setDateCreated(result[0].dateCreated);
     setSleep(result[0].sleepDuration);
     setMood(result[0].mood);
-    setThoughts(result[0].thoughts);
+    // setThoughts(result[0].thoughts);
     setEnergy(result[0].energy);
-   
   };
 
   const getQuote = async () => {
     const response = await getsQuote();
     const result = await response.json();
+    console.log("result", result);
+    setAuthor(result[0].author);
     setQuote(result[0].quote);
-    
+
     console.log(result);
   };
-  // const getAuthor = async () => {
-  //   const response = await getsAuthor();
-  //   const result = await response.json();
-  //   setQuote(result[0].author);
-    
-  //   console.log(result);
-  // };
 
   useEffect(() => {
     if (!isUserLoggedIn()) {
@@ -59,17 +54,22 @@ function MyWellness() {
     getJournal();
     getQuote();
   }, []);
-  const bull = (
-    <Box
-      // component=" span "
-      sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-    ></Box>
-  );
+  // const bull = (
+  //   <Box
+  //     // component=" span "
+  //     sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
+  //   ></Box>
+  // );
 
   const quoteCard = (
     <Fragment>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" textAlign={"center"}gutterBottom>
+        <Typography
+          sx={{ fontSize: 14 }}
+          color="text.secondary"
+          textAlign={"center"}
+          gutterBottom
+        >
           Quote of the Day
         </Typography>
         <Typography variant="h5" component="div" textAlign={"center"}>
@@ -77,9 +77,8 @@ function MyWellness() {
         </Typography>
 
         <Typography variant="body2">
-          
           <br />
-          {"Author"}
+          {author}
         </Typography>
       </CardContent>
     </Fragment>
@@ -87,16 +86,16 @@ function MyWellness() {
   const sleepCard = (
     <Fragment>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" textAlign={"center"}gutterBottom>
-          Your Sleep
+        <Typography
+          sx={{ fontSize: 14 }}
+          color="text.secondary"
+          textAlign={"center"}
+          gutterBottom
+        >
+          Hours of Sleep
         </Typography>
         <Typography variant="h5" component="div" textAlign={"center"}>
           {sleep}
-        </Typography>
-
-        <Typography variant="body2"textAlign={"center"}>
-          Hours of Sleep
-          <br />
         </Typography>
       </CardContent>
     </Fragment>
@@ -104,36 +103,34 @@ function MyWellness() {
   const moodCard = (
     <Fragment>
       <CardContent>
-      <Typography sx={{ fontSize: 14 }} color="text.secondary" textAlign={"center"}gutterBottom>
+        <Typography
+          sx={{ fontSize: 14 }}
+          color="text.secondary"
+          textAlign={"center"}
+          gutterBottom
+        >
           Your Mood
         </Typography>
         <Typography variant="h5" component="div" textAlign={"center"}>
           {mood}
         </Typography>
-
-        {/* <Typography variant="body2">
-          Body 2 text
-          <br />
-          {'"text"'}
-        </Typography> */}
       </CardContent>
     </Fragment>
   );
   const energyCard = (
     <Fragment>
       <CardContent>
-      <Typography sx={{ fontSize: 14 }} color="text.secondary" textAlign={"center"}gutterBottom>
+        <Typography
+          sx={{ fontSize: 14 }}
+          color="text.secondary"
+          textAlign={"center"}
+          gutterBottom
+        >
           Your Energy
         </Typography>
-        <Typography variant="h5" component="div"textAlign={"center"}>
+        <Typography variant="h5" component="div" textAlign={"center"}>
           {energy}
         </Typography>
-
-        {/* <Typography variant="body2">
-          Body 2 text
-          <br />
-          {'"text"'}
-        </Typography> */}
       </CardContent>
     </Fragment>
   );
@@ -145,8 +142,9 @@ function MyWellness() {
         justifyContent="center"
         alignItems="center"
         marginBottom="20px"
+        marginTop="20px"
       >
-        <Typography align="center" fontSize="32px" fontWeight="bold">
+        <Typography align="center" fontSize="32px" fontWeight="bold" mb={3}>
           My Wellness
         </Typography>
 

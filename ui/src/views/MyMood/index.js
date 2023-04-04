@@ -6,6 +6,16 @@ import { useNavigate } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { isUserLoggedIn } from "../../utility/utils";
 import "./index.css";
+import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied';
+import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
+import Box from "@mui/material/Box";
+
+const moodIcons = {
+  Happy: <EmojiEmotionsIcon/>,
+  Positive:  <EmojiEmotionsIcon/>,
+  Sad: <SentimentVeryDissatisfiedIcon />
+}
 
 function MyMood() {
   const [Mood, setMood] = useState(""); //this is to select my mood
@@ -49,6 +59,7 @@ function MyMood() {
   }
   return (
     <Fragment>
+      <Box width="800px" mt="10px" ml="20px"></Box>
       <Grid
         container
         direction="column"
@@ -99,7 +110,12 @@ function MyMood() {
                 onClick={() => handleSelectMood("Happy")}
                 color={Mood === "Happy" ? "success" : "primary"}
               >
-                <Typography fontWeight="bold">Happy</Typography>
+                <Typography fontWeight="bold">
+                  <div className="feeling">
+                  <div>Happy</div>
+                  <div className="feeling-icon"> {moodIcons["Happy"]}</div>
+                  </div>
+                </Typography>
               </Button>
             </Grid>
             <Grid item>
@@ -108,7 +124,11 @@ function MyMood() {
                 onClick={() => handleSelectMood("Positive")}
                 color={Mood === "Positive" ? "success" : "primary"}
               >
-                <Typography fontWeight="bold">Positive</Typography>
+                <Typography fontWeight="bold">
+                <div className="feeling">
+                  <div>Positive</div>
+                  <div className="feeling-icon"> {moodIcons["Positive"]}</div>
+                  </div></Typography>
               </Button>
             </Grid>
             <Grid item>
@@ -153,7 +173,11 @@ function MyMood() {
                 onClick={() => handleSelectMood("Sad")}
                 color={Mood === "Sad" ? "success" : "primary"}
               >
-                <Typography fontWeight="bold">Sad</Typography>
+                <Typography fontWeight="bold">
+                  <div className="feeling">
+                  <div>Sad</div>
+                  <div className="feeling-icon"> {moodIcons["Sad"]}</div>
+                  </div></Typography>
               </Button>
             </Grid>
             <Grid item>

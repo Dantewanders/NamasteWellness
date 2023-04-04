@@ -10,10 +10,6 @@ import { Typography } from "@mui/material";
 import MuiInput from "@mui/material/Input";
 import sleep from "../../Images/sleep.jpg";
 
-
-
-
-
 function MySleep() {
   const EnergyLevel = [
     {
@@ -112,7 +108,7 @@ function MySleep() {
     <Fragment>
       <Grid m="50px">
         <Grid item>
-          <Typography variant="h5" fontWeight="bold" mt="20px" mb= "20px">
+          <Typography variant="h5" fontWeight="bold" mt="20px" mb="20px">
             Monitoring your Sleep
           </Typography>
 
@@ -124,7 +120,7 @@ function MySleep() {
             learning what causes a good or bad night's sleep can be hard to
             identify. Enter Namaste Wellness.
           </Typography>
-          <Typography variant="h5" fontWeight="bold" mt="20px" mb= "20px">
+          <Typography variant="h5" fontWeight="bold" mt="20px" mb="20px">
             Truth and sleep
           </Typography>
           <Typography variant="body1" mt="20px" mb="20px">
@@ -142,10 +138,10 @@ function MySleep() {
             Namaste Wellness, to help you reach better health through better
             sleep, one point of truth at a time.
           </Typography>
-          <Typography variant="h5" fontWeight="bold" mt="20px" mb= "20px" >
+          <Typography variant="h5" fontWeight="bold" mt="20px" mb="20px">
             How Does Sleep Impact Energy Levels?
           </Typography>
-          <Typography variant="body1" mt="20px" mb= "20px">
+          <Typography variant="body1" mt="20px" mb="20px">
             The relationship between lifestyle choices and sleep also impacts
             our energy balance. Energy balance is used to describe the net
             outcome of energy intake (food consumption) with energy expenditure
@@ -157,7 +153,7 @@ function MySleep() {
             and influence our feelings of energy and our energy balance.
           </Typography>
           <Typography>
-          <img src={sleep} alt="sleep" />
+            <img src={sleep} alt="sleep" />
           </Typography>
         </Grid>
 
@@ -196,7 +192,7 @@ function MySleep() {
               <Grid item>
                 <Input
                   value={Sleep}
-                  size="small"
+                  size="large"
                   onChange={handleInputChange}
                   onBlur={handleBlur}
                   inputProps={{
@@ -210,14 +206,14 @@ function MySleep() {
               </Grid>
             </Grid>
           </Box>
-          
-            
-          <Box sx={{ width: 300 }} mt= "45px" mb="45px">
+
+          <Box sx={{ width: 300 }} mt="45px" mb="45px">
             <Typography id="input-slider" gutterBottom>
               Energy Level
             </Typography>
             <Slider
               aria-label="Always visible"
+              size="large"
               defaultValue={50}
               min={0}
               max={100}
