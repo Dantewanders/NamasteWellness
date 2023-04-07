@@ -2,7 +2,6 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
-
 import Home from "./views/Home";
 import NotFound from "./views/NotFound";
 import Layout from "./layouts";
@@ -22,11 +21,7 @@ import MyJournals from "./views/MyJournals";
 function App() {
   return (
     <div className="App">
-      {/* <div 
-     className="background-image"
-     style={{ backgroundImage: namaste_BG }}
-     >
-     </div> */}
+     
       <LocalizationProvider dateAdapter={AdapterMoment}>
         <ThemeContextProvider>
           <Routes>

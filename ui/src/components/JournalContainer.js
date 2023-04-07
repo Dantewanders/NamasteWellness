@@ -19,7 +19,9 @@ function JournalContainer() {
       .then((response) => {
         console.log(response);
         alert("Journal submitted successfully!");
+        //redirect after a deley to my wellness page
       })
+      
       .catch((err) => console.log("Unable to submit journal"));
   };
 
