@@ -3,7 +3,7 @@ const { showUserByUsername, showUserById } = require("../service/user");
 exports.getUserByUsername = async (req, res) => {
   try {
     const userByName = await showUserByUsername(req.params.username);
-console.log(userByName, "userByName");
+    console.log(userByName, "userByName");
     res.json(userByName);
   } catch (error) {
     res.status(500).send("Internal Server Error");

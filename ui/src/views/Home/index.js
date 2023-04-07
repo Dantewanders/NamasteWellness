@@ -174,8 +174,7 @@ function Home(props) {
                   </Grid>
                 </Typography>
               </CardContent>
-            </Card>
-            {" "}
+            </Card>{" "}
           </Grid>
         </Grid>
         <Box align="center">

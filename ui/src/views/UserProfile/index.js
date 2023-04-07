@@ -98,11 +98,8 @@ function UserProfile() {
 
   return (
     <div>
-      <Box sx={{ flexGrow:1 }}>
-        <Grid 
-        container 
-        alignItems={"center"}
-        margin={10} spacing={4}>
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container alignItems={"center"} margin={10} spacing={4}>
           <Grid item xs={12} sm={6}>
             <UnstyledInputIntroduction
               label="First Name"

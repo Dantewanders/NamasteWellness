@@ -1,7 +1,7 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import { LocalizationProvider } from '@mui/x-date-pickers';
-import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment'
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 
 import Home from "./views/Home";
 import NotFound from "./views/NotFound";
@@ -19,44 +19,37 @@ import MySleep from "./views/MySleep";
 import MyThoughts from "./views/MyThoughts";
 import MyJournals from "./views/MyJournals";
 
-
-
-
 function App() {
   return (
-    
-   
     <div className="App">
       {/* <div 
      className="background-image"
      style={{ backgroundImage: namaste_BG }}
      >
      </div> */}
-        <LocalizationProvider dateAdapter={AdapterMoment}>
-      <ThemeContextProvider>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="/user/:username" element={<UserProfile />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/user/logout" element={<Logout />} />
-            <Route path="/register" element={<RegisterForm />} />
-            <Route path="/MyWellness" element={<MyWellness />} />
-            <Route path="/MyMood" element={<MyMood />} />
-            <Route path="/MySleep" element={<MySleep/>} />
-            <Route path="/MyThoughts" element={<MyThoughts/>} />
-            <Route path="/user/settings" element={<Settings />} />
-            <Route path="/resources" element={<Resources />} />
-            <Route path="/MyJournals" element={<MyJournals/>} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
-      </ThemeContextProvider>
+      <LocalizationProvider dateAdapter={AdapterMoment}>
+        <ThemeContextProvider>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="/user/:username" element={<UserProfile />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/user/logout" element={<Logout />} />
+              <Route path="/register" element={<RegisterForm />} />
+              <Route path="/MyWellness" element={<MyWellness />} />
+              <Route path="/MyMood" element={<MyMood />} />
+              <Route path="/MySleep" element={<MySleep />} />
+              <Route path="/MyThoughts" element={<MyThoughts />} />
+              <Route path="/user/settings" element={<Settings />} />
+              <Route path="/resources" element={<Resources />} />
+              <Route path="/MyJournals" element={<MyJournals />} />
+              <Route path="*" element={<NotFound />} />
+            </Route>
+          </Routes>
+        </ThemeContextProvider>
       </LocalizationProvider>
-           
-  
     </div>
-    
-)}
+  );
+}
 
 export default App;

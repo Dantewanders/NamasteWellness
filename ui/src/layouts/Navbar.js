@@ -14,9 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 import { isUserLoggedIn, getToken } from "../utility/utils";
 import { getUser } from "../utility/api";
-import SpaIcon from '@mui/icons-material/Spa';
-
-
+import SpaIcon from "@mui/icons-material/Spa";
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -47,14 +45,13 @@ function Navbar() {
       const token = getToken();
       //fetch user's data
       getUser(token)
-        .then((data) =>{
-          setUser(data) 
+        .then((data) => {
+          setUser(data);
         })
 
         .catch((error) => console.log(error));
     }
   }, []);
-
 
   const settings = [
     {
@@ -77,10 +74,9 @@ function Navbar() {
       label: "Logout",
       path: "/user/logout",
     },
-    
   ];
 
-  const pages = [  ];
+  const pages = [];
   return (
     <AppBar position="static">
       <Container maxWidth="xl">

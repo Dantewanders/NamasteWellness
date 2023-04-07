@@ -66,12 +66,12 @@ function RegistrationForm() {
     <Fragment>
       <Grid container direction="row" justifyContent="center">
         <Card
-        size="lg"
+          size="lg"
           className="form-container"
           sx={{
             width: "400px",
-            height:"auto",
-            background :"#fff",
+            height: "auto",
+            background: "#fff",
             borderRadius: "20px",
             boxShadow: "3px 2px 7px rgb(0, 0, 0, 0.5)",
           }}
@@ -101,10 +101,15 @@ function RegistrationForm() {
 
             <Grid container direction="column" justify="center">
               <TextField
-          
                 className="form"
                 label="First Name"
-                sx={{ marginBottom: "15px", border :"1px solid white", marginTop: "10px" ,marginLeft:"0px", marginRight:"0px" }}
+                sx={{
+                  marginBottom: "15px",
+                  border: "1px solid white",
+                  marginTop: "10px",
+                  marginLeft: "0px",
+                  marginRight: "0px",
+                }}
                 onChange={(first_name) => setFirstName(first_name.target.value)}
                 value={first_name}
               />

@@ -6,16 +6,16 @@ import { useNavigate } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { isUserLoggedIn } from "../../utility/utils";
 import "./index.css";
-import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
-import SentimentDissatisfiedIcon from '@mui/icons-material/SentimentDissatisfied';
-import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
+import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
+import SentimentDissatisfiedIcon from "@mui/icons-material/SentimentDissatisfied";
+import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
 import Box from "@mui/material/Box";
 
 const moodIcons = {
-  Happy: <EmojiEmotionsIcon/>,
-  Positive:  <EmojiEmotionsIcon/>,
-  Sad: <SentimentVeryDissatisfiedIcon />
-}
+  Happy: <EmojiEmotionsIcon />,
+  Positive: <EmojiEmotionsIcon />,
+  Sad: <SentimentVeryDissatisfiedIcon />,
+};
 
 function MyMood() {
   const [Mood, setMood] = useState(""); //this is to select my mood
@@ -31,16 +31,17 @@ function MyMood() {
     }
   }, []);
 
-  const handleStart = () => { //this is to start the process
+  const handleStart = () => {
+    //this is to start the process
     if (!Mood) {
       return setErrorMsg("Please select your Mood before continuing.");
     }
 
     localStorage.setItem("Mood", Mood); //this is to store the mood in the local storage
 
-    navigate("/mysleep");//this is to navigate to the mysleep page
+    navigate("/mysleep"); //this is to navigate to the mysleep page
 
-    setIsChoosing(true); 
+    setIsChoosing(true);
   };
 
   const handleSelectMood = (selected) => {
@@ -67,43 +68,41 @@ function MyMood() {
         alignItems="center"
         marginBottom="20px"
       >
-        <Grid item 
-        mt="20px"
-        mb="20px"
-        >
-        <Typography variant="h5" fontWeight="bold">
-        Monitoring your Mood
-      </Typography>
+        <Grid item mt="20px" mb="20px">
+          <Typography variant="h5" fontWeight="bold">
+            Monitoring your Mood
+          </Typography>
 
-      <Typography variant="body1">
-      Understanding your moods helps you manage them and feel better faster.
-      If you are more aware of your moods, you may be able to better manage your lifestyle choices, 
-      make informed health decisions, prevent or avoid triggers of negative moods, and work towards a better quality of life.
-      The trick is to watch for changes in your mood, particularly any very high swings or very low dips (which may mean you need help to even out your emotional state). 
-      Self-monitoring is free and takes hardly any time. And it becomes easier as you make it part of your daily routine.
-      </Typography>
-        < Typography > 
-        <p>
-          
-        </p>
-        </Typography>
-          <Grid           
-          >         
+          <Typography variant="body1">
+            Understanding your moods helps you manage them and feel better
+            faster. If you are more aware of your moods, you may be able to
+            better manage your lifestyle choices, make informed health
+            decisions, prevent or avoid triggers of negative moods, and work
+            towards a better quality of life. The trick is to watch for changes
+            in your mood, particularly any very high swings or very low dips
+            (which may mean you need help to even out your emotional state).
+            Self-monitoring is free and takes hardly any time. And it becomes
+            easier as you make it part of your daily routine.
+          </Typography>
+          <Typography>
+            <p></p>
+          </Typography>
+          <Grid>
             <Typography align="center" fontSize="25px" fontWeight="bold">
               How do You feel today?
             </Typography>
           </Grid>
           <Grid
-           container
-           direction="row"
-           justifyContent="center"
-           alignItems="center"
-           rowSpacing={5}
-           columnSpacing={10}
-           style={{ maxWidth: "1500px" }}
-           marginTop="20px"
-           marginBottom="50px"
-     >
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            rowSpacing={5}
+            columnSpacing={10}
+            style={{ maxWidth: "1500px" }}
+            marginTop="20px"
+            marginBottom="50px"
+          >
             <Grid item>
               <Button
                 variant="contained"
@@ -112,8 +111,8 @@ function MyMood() {
               >
                 <Typography fontWeight="bold">
                   <div className="feeling">
-                  <div>Happy</div>
-                  {/* <div className="feeling-icon"> {moodIcons["Happy"]}</div> */}
+                    <div>Happy</div>
+                    {/* <div className="feeling-icon"> {moodIcons["Happy"]}</div> */}
                   </div>
                 </Typography>
               </Button>
@@ -125,10 +124,11 @@ function MyMood() {
                 color={Mood === "Positive" ? "success" : "primary"}
               >
                 <Typography fontWeight="bold">
-                <div className="feeling">
-                  <div>Positive</div>
-                  {/* <div className="feeling-icon"> {moodIcons["Positive"]}</div> */}
-                  </div></Typography>
+                  <div className="feeling">
+                    <div>Positive</div>
+                    {/* <div className="feeling-icon"> {moodIcons["Positive"]}</div> */}
+                  </div>
+                </Typography>
               </Button>
             </Grid>
             <Grid item>
@@ -175,9 +175,10 @@ function MyMood() {
               >
                 <Typography fontWeight="bold">
                   <div className="feeling">
-                  <div>Sad</div>
-                  {/* <div className="feeling-icon"> {moodIcons["Sad"]}</div> */}
-                  </div></Typography>
+                    <div>Sad</div>
+                    {/* <div className="feeling-icon"> {moodIcons["Sad"]}</div> */}
+                  </div>
+                </Typography>
               </Button>
             </Grid>
             <Grid item>

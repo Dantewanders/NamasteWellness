@@ -4,13 +4,9 @@ import { Typography } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
 import Box from "@mui/material/Box";
 
-
-
-function quoteCard () {
-  
-    return (
+function quoteCard() {
+  return (
     <Fragment>
-         
       <CardContent>
         <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
           Quote of the Day
@@ -25,6 +21,7 @@ function quoteCard () {
           {'"text"'}
         </Typography>
       </CardContent>
-      </Fragment>
- ) };
-  export default quoteCard;
+    </Fragment>
+  );
+}
+export default quoteCard;

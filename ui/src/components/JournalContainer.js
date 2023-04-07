@@ -24,8 +24,8 @@ function JournalContainer() {
   };
 
   return (
-    
-    <div><form onSubmit={handleSubmitJournal}>
+    <div>
+      <form onSubmit={handleSubmitJournal}>
         <label>
           <TextField
             fullWidth
@@ -45,8 +45,6 @@ function JournalContainer() {
         <br />
         <br />
         <button type="submit">Submit your Journal</button>
-       
-         
       </form>
     </div>
   );

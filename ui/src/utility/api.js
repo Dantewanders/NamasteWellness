@@ -59,7 +59,7 @@ export const register = async (data) => {
       `Status Code: ${response?.status} - ${responseData?.message}`
     );
   }
-//   console.log(responseData);
+  //   console.log(responseData);
   return responseData;
 };
 
@@ -68,7 +68,7 @@ export const getUserProfile = async (username) => {
   const response = await fetch(`${baseUrl}/user/username/${username}`, {
     method: "GET",
   });
-//   console.log(response);
+  //   console.log(response);
   const responseData = await response.json();
 
   if (!response.ok) {
@@ -85,12 +85,11 @@ export const getUser = async (token) => {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${token}`,// the token is a variable which holds the token
+      Authorization: `Bearer ${token}`, // the token is a variable which holds the token
     },
   });
 
-  const responseData =  response.json();
-
+  const responseData = response.json();
 
   if (!response.ok) {
     throw new Error(
@@ -122,7 +121,8 @@ export const updatePassword = async (token, data) => {
   return responseData;
 };
 
-export const submitJournal = async (token, data) => { // token is the token from local storage
+export const submitJournal = async (token, data) => {
+  // token is the token from local storage
   const response = await fetch(`${baseUrl}/journal/new`, {
     method: "post",
     headers: {
@@ -133,9 +133,9 @@ export const submitJournal = async (token, data) => { // token is the token from
   });
 
   return response;
-}
+};
 
-export const getMyJournal = async (date,token) => {
+export const getMyJournal = async (date, token) => {
   const response = await fetch(`${baseUrl}/journal/?date=${date}`, {
     method: "get",
     headers: {
@@ -145,7 +145,7 @@ export const getMyJournal = async (date,token) => {
   });
 
   return response;
-}
+};
 
 export const deleteJournal = async (journal_id, token) => {
   const response = await fetch(`${baseUrl}/journal/${journal_id}`, {
@@ -155,7 +155,7 @@ export const deleteJournal = async (journal_id, token) => {
       Authorization: `Bearer ${token}`,
     },
   });
-}
+};
 
 export const getsQuote = async () => {
   const response = await fetch(`${baseUrl}/quote/today`, {
@@ -166,5 +166,4 @@ export const getsQuote = async () => {
   });
 
   return response;
-}
-
+};

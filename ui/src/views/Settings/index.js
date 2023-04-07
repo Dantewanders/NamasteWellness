@@ -4,22 +4,18 @@ import TextField from "@mui/material/TextField";
 import { updatePassword } from "../../utility/api";
 import Button from "@mui/material/Button";
 import { getToken } from "../../utility/utils";
-import Snackbar from '@mui/material/Snackbar';
-import MuiAlert from '@mui/material/Alert';
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
 
-const Alert =forwardRef(function Alert(props, ref) {
+const Alert = forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
 });
-
-//I want to validate the username and password
-//I want to update password in the database
-//I need to connect the update field to the database
 
 function Settings(props) {
   const [open, setOpen] = useState(false);
 
   const handleClose = (event, reason) => {
-    if (reason === 'clickaway') {
+    if (reason === "clickaway") {
       return;
     }
 
@@ -54,15 +50,19 @@ function Settings(props) {
           id="outlined-password-input"
           label="Password"
           type="password"
-          sx={{ marginBottom: "5px", borderRadius:"25px", background: "#fff"}}
+          sx={{ marginBottom: "5px", borderRadius: "25px", background: "#fff" }}
           onChange={(password) => setPasswordValue(password.target.value)}
           value={passwordValue}
         />
         <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-          Password Updated Successfully!
-        </Alert>
-      </Snackbar>
+          <Alert
+            onClose={handleClose}
+            severity="success"
+            sx={{ width: "100%" }}
+          >
+            Password Updated Successfully!
+          </Alert>
+        </Snackbar>
       </div>
 
       <Button onClick={handleSubmit}>Submit</Button>

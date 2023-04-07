@@ -1,7 +1,7 @@
 import { Card, CardContent, Grid, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import SpaIcon from '@mui/icons-material/Spa';
+import SpaIcon from "@mui/icons-material/Spa";
 import Box from "@mui/material/Box";
 import React, { Fragment } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -25,9 +25,9 @@ function LoginForm() {
         password: passwordValue,
       });
 
-      console.log('login response', tokenValue);
+      console.log("login response", tokenValue);
 
-      console.log('token value==>:', tokenValue.token)
+      console.log("token value==>:", tokenValue.token);
 
       setToken(tokenValue.token);
 
@@ -124,7 +124,6 @@ function LoginForm() {
                 justifySelf: "center",
               }}
               onClick={handleSignIn}
-
             >
               Sign in
             </Button>
