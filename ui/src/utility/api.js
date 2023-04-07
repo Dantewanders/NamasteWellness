@@ -89,7 +89,8 @@ export const getUser = async (token) => {
     },
   });
 
-  const responseData = await response.json();
+  const responseData =  response.json();
+
 
   if (!response.ok) {
     throw new Error(
@@ -134,8 +135,8 @@ export const submitJournal = async (token, data) => { // token is the token from
   return response;
 }
 
-export const getMyJournal = async (token) => {
-  const response = await fetch(`${baseUrl}/journal/today`, {
+export const getMyJournal = async (date,token) => {
+  const response = await fetch(`${baseUrl}/journal/?date=${date}`, {
     method: "get",
     headers: {
       "Content-Type": "application/json",
@@ -144,6 +145,16 @@ export const getMyJournal = async (token) => {
   });
 
   return response;
+}
+
+export const deleteJournal = async (journal_id, token) => {
+  const response = await fetch(`${baseUrl}/journal/${journal_id}`, {
+    method: "delete",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
 }
 
 export const getsQuote = async () => {

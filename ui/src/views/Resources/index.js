@@ -2,6 +2,8 @@ import React from "react";
 import { Fragment } from "react";
 import { Typography, Grid } from "@mui/material";
 import { Box } from "@mui/system";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 import { Link } from "react-router-dom";
 import MyWellnessButton from "../../components/MyWellnessButton";
 import ListItem from "@mui/material/ListItem";
@@ -10,7 +12,14 @@ import "./index.css";
 function Resources() {
   return (
     <Fragment>
-      <Grid m="50px">
+      
+      <Grid
+       container
+       direction="flex"
+       justifyContent="center"
+       alignItems="center"
+       spacing={3}
+       m="50px">
         <Grid item>
           <Typography variant="h5" fontWeight="bold" mb="20px">
             Finding Help: When to Get It and Where to Go
@@ -25,18 +34,14 @@ function Resources() {
             to a medical or mental health professional.
           </Typography>
         </Grid>
-
-        <Grid item>
-          <Typography
-            variant="body1"
-            fontWeight="bold"
-            fontSize="18px"
-            mt="10px"
-          >
+        <Grid item>          
+          <Card sx={{ maxWidth: 800, borderRadius: "25px", opacity: "inherit" }}>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
             In Adults
-          </Typography>
-
-          <Box width="1100px">
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+            {/* <Box width="1100px"> */}
             <Grid container rowSpacing={1} columnSpacing={1} mt="3px">
               <Grid item xs={4}>
                 <ListItem sx={{ display: "list-item" }}>
@@ -106,18 +111,19 @@ function Resources() {
                 </ListItem>
               </Grid>
             </Grid>
-          </Box>
-
-          <Typography
-            variant="body1"
-            fontWeight="bold"
-            fontSize="18px"
-            mt="10px"
-          >
+          {/* </Box> */}
+            </Typography>
+          </CardContent>
+        </Card>
+        </Grid>
+        <Grid item>          
+          <Card sx={{ maxWidth: 800, borderRadius: "25px", opacity: "inherit" }}>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
             In Adolescents & Young Adults
-          </Typography>
-
-          <Box width="1100px">
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+            {/* <Box width="1100px"> */}
             <Grid container rowSpacing={1} columnSpacing={1} mt="3px">
               <Grid item xs={4}>
                 <ListItem sx={{ display: "list-item" }}>
@@ -168,18 +174,20 @@ function Resources() {
                 </ListItem>
               </Grid>
             </Grid>
-          </Box>
-          <Typography
-            variant="body1"
-            fontWeight="bold"
-            fontSize="18px"
-            mt="10px"
-          >
+          {/* </Box> */}
+            </Typography>
+          </CardContent>
+        </Card>
+        </Grid>
+        <Grid item>          
+          <Card sx={{ maxWidth: 800, borderRadius: "25px", opacity: "inherit" }}>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
             In Younger Children & Pre-Adolescents
-          </Typography>
-
-          <Box width="1100px">
-            <Grid container rowSpacing={1} columnSpacing={1} mt="3px">
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+                        <Grid container rowSpacing={1} columnSpacing={1} mt="3px">
+                        <Grid container rowSpacing={1} columnSpacing={1} mt="3px">
               <Grid item xs={4}>
                 <ListItem sx={{ display: "list-item" }}>
                   Changes in school performance
@@ -220,10 +228,14 @@ function Resources() {
                   Frequent temper tantrums
                 </ListItem>
               </Grid>
+            </Grid>           
             </Grid>
-          </Box>
-
-          <Typography
+            </Typography>
+          </CardContent>
+        </Card>
+        </Grid>
+        <Grid item>
+           <Typography
             variant="body1"
             fontWeight="bold"
             fontSize="18px"
@@ -336,7 +348,6 @@ function Resources() {
             </Grid>
           </Box>
         </Grid>
-
         <Grid
           container
           direction="column"

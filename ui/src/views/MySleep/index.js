@@ -9,6 +9,9 @@ import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import MuiInput from "@mui/material/Input";
 import sleep from "../../Images/sleep.jpg";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
 
 function MySleep() {
   const EnergyLevel = [
@@ -27,14 +30,7 @@ function MySleep() {
   ];
 
   const Input = MuiInput;
-  // width= "42px";
-
   const [value, setValue] = useState(30);
-
-  // const handleSliderChange = (event, newValue) => {
-  //   setValue(newValue);
-  // };
-
   const handleInputChange = (event) => {
     setValue(event.target.value === "" ? "" : Number(event.target.value));
   };
@@ -51,9 +47,7 @@ function MySleep() {
   const [Energy, setEnergy] = useState(""); //this is to select energy level
   const [errorMsg, setErrorMsg] = useState(""); //this is to display my error message
   const [isChoosing, setIsChoosing] = useState(false);
-
   const navigate = useNavigate();
-  //this checks if the user is logged in
 
   useEffect(() => {
     if (!isUserLoggedIn()) {
@@ -70,7 +64,6 @@ function MySleep() {
 
     localStorage.setItem("Sleep", Sleep);
     localStorage.setItem("Energy", Energy);
-
     navigate("/mythoughts");
 
     setIsChoosing(true);
@@ -101,135 +94,167 @@ function MySleep() {
       />
     );
   }
-  // function valuetext(value) {
-  //   return `${value} Hours`;
-  // }
+
   return (
     <Fragment>
-      <Grid m="50px">
-        <Grid item>
-          <Typography variant="h5" fontWeight="bold" mt="20px" mb="20px">
-            Monitoring your Sleep
-          </Typography>
-
-          <Typography variant="body1">
-            There's no denying the importance of sleep in our busy lifestyles.
-            And there's also no denying that incredible feeling of waking up
-            after a good night's rest. Unfortunately, having a restless night of
-            poor sleep is something we have to deal with from time to time. But
-            learning what causes a good or bad night's sleep can be hard to
-            identify. Enter Namaste Wellness.
-          </Typography>
-          <Typography variant="h5" fontWeight="bold" mt="20px" mb="20px">
-            Truth and sleep
-          </Typography>
-          <Typography variant="body1" mt="20px" mb="20px">
-            The benefits of sleep tracking are as flexible as your journey
-            through life, then. A number that means nothing to you now, can be
-            the single most important one in a few months. These quantified
-            truths remain non-judgmental, because you decide their relevance.
-            You apply the value to them. The data is nothing without you and it
-            certainly doesn't get to decide who you are and what you feel like
-            on a certain day. But it helps you understand yourself. It helps you
-            make informed decisions on your health. It clears away certain
-            doubts and you can focus on that which remains, your subjective
-            experience on your quality of rest and what you need to reach better
-            sleep. That is the benefit of sleep tracking. That is our mission at
-            Namaste Wellness, to help you reach better health through better
-            sleep, one point of truth at a time.
-          </Typography>
-          <Typography variant="h5" fontWeight="bold" mt="20px" mb="20px">
-            How Does Sleep Impact Energy Levels?
-          </Typography>
-          <Typography variant="body1" mt="20px" mb="20px">
-            The relationship between lifestyle choices and sleep also impacts
-            our energy balance. Energy balance is used to describe the net
-            outcome of energy intake (food consumption) with energy expenditure
-            (activity). Insufficient sleep has been linked to an imbalanced
-            increase in energy intake over expenditure, which leads to a
-            positive energy balance and weight gain. Sleep quality may also
-            moderate the relationship between physical activity and feelings of
-            fatigue. This indicates that diet, exercise, and sleep all interact
-            and influence our feelings of energy and our energy balance.
-          </Typography>
-          <Typography>
-            <img src={sleep} alt="sleep" />
-          </Typography>
+      <Box sx={{ flexGrow: 1 }}>
+        <Grid container direction="row" margin={2} spacing={4}>
+          <Grid item xs={12} sm={4}>
+            <Card
+              sx={{ maxWidth: 400, borderRadius: "25px", opacity: "inherit" }}
+            >
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Monitoring your Sleep
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  There's no denying the importance of sleep in our busy
+                  lifestyles. And there's also no denying that incredible
+                  feeling of waking up after a good night's rest. Unfortunately,
+                  having a restless night of poor sleep is something we have to
+                  deal with from time to time. But learning what causes a good
+                  or bad night's sleep can be hard to identify. Enter Namaste
+                  Wellness.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Card
+              sx={{ maxWidth: 400, borderRadius: "25px", opacity: "inherit" }}
+            >
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  How Does Sleep Impact Energy Levels?
+                </Typography>
+                <CardMedia
+                  component="img"
+                  height="160"
+                  image={sleep}
+                  alt="sleep"
+                />
+                <Typography variant="body2" color="text.secondary">
+                  The relationship between lifestyle choices and sleep also
+                  impacts our energy balance. Energy balance is used to describe
+                  the net outcome of energy intake (food consumption) with
+                  energy expenditure (activity). Insufficient sleep has been
+                  linked to an imbalanced increase in energy intake over
+                  expenditure, which leads to a positive energy balance and
+                  weight gain. Sleep quality may also moderate the relationship
+                  between physical activity and feelings of fatigue. This
+                  indicates that diet, exercise, and sleep all interact and
+                  influence our feelings of energy and our energy balance.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Card
+              sx={{ maxWidth: 400, borderRadius: "25px", opacity: "inherit" }}
+            >
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="div">
+                  Truth and sleep
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  The benefits of sleep tracking are as flexible as your journey
+                  through life, then. A number that means nothing to you now,
+                  can be the single most important one in a few months. These
+                  quantified truths remain non-judgmental, because you decide
+                  their relevance. You apply the value to them. The data is
+                  nothing without you and it certainly doesn't get to decide who
+                  you are and what you feel like on a certain day. But it helps
+                  you understand yourself. It helps you make informed decisions
+                  on your health. It clears away certain doubts and you can
+                  focus on that which remains, your subjective experience on
+                  your quality of rest and what you need to reach better sleep.
+                  That is the benefit of sleep tracking. That is our mission at
+                  Namaste Wellness, to help you reach better health through
+                  better sleep, one point of truth at a time.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
+      </Box>
 
-        <Grid align="center" mt="40px">
-          <Typography color="red" fontSize="18px" mb="15px">
-            {errorMsg}
+      {/* /second grid */}
+
+      <Grid align="center" mt="40px">
+        <Typography color="red" fontSize="18px" mb="15px">
+          {errorMsg}
+        </Typography>
+        <Box
+          sx={{ width: 250 }}
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          rowSpacing={2}
+          columnSpacing={2}
+          style={{ maxWidth: "950px" }}
+          marginTop="50px"
+        >
+          <Typography id="input-slider" gutterBottom>
+            Sleep Duration
           </Typography>
-          <Box
-            sx={{ width: 250 }}
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-            rowSpacing={2}
-            columnSpacing={2}
-            style={{ maxWidth: "950px" }}
-            marginTop="50px"
-          >
-            <Typography id="input-slider" gutterBottom>
-              Sleep Duration
-            </Typography>
-            <Grid container spacing={2} alignItems="center">
-              <Grid item></Grid>
-              <Grid item xs>
-                <Slider
-                  onChange={handleSelectSleep}
-                  aria-labelledby="input-slider"
-                  color={Sleep === "8" ? "success" : "primary"}
-                  defaultValue={8}
-                  min={0}
-                  max={24}
-                  step={1}
-                />
-              </Grid>
-
-              <Grid item>
-                <Input
-                  value={Sleep}
-                  size="large"
-                  onChange={handleInputChange}
-                  onBlur={handleBlur}
-                  inputProps={{
-                    step: 1,
-                    min: 0,
-                    max: 24,
-                    type: "number",
-                    "aria-labelledby": "sleep input-slider",
-                  }}
-                />
-              </Grid>
+          <Grid container spacing={2} alignItems="center">
+            <Grid item></Grid>
+            <Grid item xs>
+              <Slider
+                size="medium"
+                onChange={handleSelectSleep}
+                aria-labelledby="input-slider"
+                color={Sleep === "8" ? "success" : "primary"}
+                defaultValue={8}
+                min={0}
+                max={24}
+                step={1}
+              />
             </Grid>
-          </Box>
 
-          <Box sx={{ width: 300 }} mt="45px" mb="45px">
-            <Typography id="input-slider" gutterBottom>
-              Energy Level
-            </Typography>
-            <Slider
-              aria-label="Always visible"
-              size="large"
-              defaultValue={50}
-              min={0}
-              max={100}
-              step={1}
-              valueLabelDisplay="off"
-              onChange={handleSelectEnergy}
-              color={EnergyLevel === "High" ? "success" : "primary"}
-            />
-          </Box>
+            <Grid item>
+              <Input
+                value={Sleep}
+                size="medium"
+                color="info"
+                variant="outline"
+                onChange={handleInputChange}
+                onBlur={handleBlur}
+                inputProps={{
+                  step: 1,
+                  min: 0,
+                  max: 24,
+                  type: "number",
+                  "aria-labelledby": "sleep input-slider",
+                }}
+              />
+            </Grid>
+          </Grid>
+        </Box>
 
-          <Button variant="contained" color="secondary" onClick={handleStart}>
-            <Typography fontWeight="bold" fontSize="15px">
-              Next
-            </Typography>
-          </Button>
-        </Grid>
+        <Box sx={{ width: 300 }} mt="45px" mb="45px">
+          <Typography id="input-slider" gutterBottom>
+            Energy Level
+          </Typography>
+          <Slider
+            aria-label="Always visible"
+            size="large"
+            defaultValue={50}
+            min={0}
+            max={100}
+            step={1}
+            valueLabelDisplay="off"
+            onChange={handleSelectEnergy}
+            color={EnergyLevel === "High" ? "success" : "primary"}
+          />
+        </Box>
+
+        <Button variant="contained" color="secondary" onClick={handleStart}>
+          <Typography fontWeight="bold" fontSize="15px">
+            Next
+          </Typography>
+        </Button>
       </Grid>
     </Fragment>
   );

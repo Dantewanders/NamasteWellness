@@ -1,4 +1,4 @@
-const { showJournalsByUsername, createJournal, getuserJournalForToday} = require('../service/journal')
+const { showJournalsByUsername, createJournal, getuserJournalByDate, deleteUserJournal} = require('../service/journal')
 
 exports.getJournalsByUsername = async (req, res) => {
   
@@ -39,9 +39,23 @@ exports.addJournal = async (req, res) => {
 }
 
 exports.getUserJournalForToday = async (req, res) => {
+  const {date} = req.query;
+  console.log(date, "today");
   try {
     console.log("i got called")
-    const journal = await getuserJournalForToday(req.userId);
+    const journal = await getuserJournalByDate(req.userId, date);
+    res.json(journal);
+  } catch (error) {
+    console.log(error)
+    res.status(500).send("Internal Server Error", error)
+  }
+}
+
+exports.deleteUserJournal = async (req, res) => {
+  const {journal_id} = req.params;
+  try {
+    console.log("i got called")
+    const journal = await deleteUserJournal(req.userId, journal_id);
     res.json(journal);
   } catch (error) {
     console.log(error)

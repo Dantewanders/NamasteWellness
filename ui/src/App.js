@@ -1,5 +1,8 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterMoment } from '@mui/x-date-pickers/AdapterMoment'
+
 import Home from "./views/Home";
 import NotFound from "./views/NotFound";
 import Layout from "./layouts";
@@ -14,13 +17,14 @@ import Resources from "./views/Resources";
 import MyMood from "./views/MyMood";
 import MySleep from "./views/MySleep";
 import MyThoughts from "./views/MyThoughts";
-import namaste_BG from './Images/namaste_BG.jpg'
+import MyJournals from "./views/MyJournals";
 
 
 
 
 function App() {
   return (
+    
    
     <div className="App">
       {/* <div 
@@ -28,6 +32,7 @@ function App() {
      style={{ backgroundImage: namaste_BG }}
      >
      </div> */}
+        <LocalizationProvider dateAdapter={AdapterMoment}>
       <ThemeContextProvider>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -42,10 +47,12 @@ function App() {
             <Route path="/MyThoughts" element={<MyThoughts/>} />
             <Route path="/user/settings" element={<Settings />} />
             <Route path="/resources" element={<Resources />} />
+            <Route path="/MyJournals" element={<MyJournals/>} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
       </ThemeContextProvider>
+      </LocalizationProvider>
            
   
     </div>

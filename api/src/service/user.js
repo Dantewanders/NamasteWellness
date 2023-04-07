@@ -30,6 +30,7 @@ exports.showUserByUsername = async (username) => {
 
 exports.showUserById = async (id) => {
   const user = await knex("user").where("user_id", id).first();
+  console.log("user data", user)
   return user;
 };
 

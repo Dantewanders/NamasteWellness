@@ -1,75 +1,29 @@
-// import React ,{useRef,useEffect}from 'react'
-// import { useNavigate } from 'react-router-dom';
-// import "./SearchForm.css";
-// import SearchIcon from '@mui/icons-material/Search';
-// import { useBookContext } from '../../BookData/bookData';
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import moment from "moment";
+import React, { useState, useEffect } from "react";
 
-// const SearchForm = () => {
-//   const {setSearchTerm, setResultTitle} = useBookContext();
-//   const searchText = useRef('');
-//   const navigate = useNavigate();
+const SearchForm = (props) => {
+  const { onValueChange } = props;
 
-//   useEffect(() => searchText.current.focus(), []);
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     let tempSearchTerm = searchText.current.value.trim();
+  const [value, setValue] = useState(moment());
 
-//     if((tempSearchTerm.replace(/{^\s\$/g, '')).length === 0) {
-//       /*if the search is empty, then the search is set to '0'*/
-//       setSearchTerm("2023-04-04	7");
-//       setResultTitle("try another search");
-//     }
-//     else {
-//       setSearchTerm(searchText.current.value);
-//     }
-//     navigate('/MyWellness');
+  useEffect(() => {
+    if (value && onValueChange && typeof onValueChange === "function") {
+      onValueChange(value);
+    }
+  }, [value]);
 
- 
-// }
-// return (
-//   <div className= 'search-form'>
-//     <div className= 'container'>
-//       <div className= 'search-form-content'>
-//         <form className= 'search-form'></form>
-//         <div className= 'search-form-elements flex flex-c bg-white'>
-//           <input type = "text"
-//           className ='form-control' 
-//           placeholder = '  My Journal'
-//           ref={searchText}
-//           />
-//           <button type = "submit" className = 'flex flex-c' onClick={handleSubmit}>
-//             <SearchIcon sx={{ fontSize: 60 }}className = 'text-light-blue'/>
-//             {/* icon from material ui and instructions */}
-//           </button>
-//       </div>
-//     </div>
-//   </div>
-// </div>
-// )
-// }
-
-
-// export default SearchForm
-
-import { TextField } from '@mui/material'
-import React, { useState } from 'react'
-
-const SearchForm = () => {
-    const [searchTerm, setSearchTerm] = useState("")
-    console.log({searchTerm});
-    
   return (
     <div>
-         <TextField
-                className="form"
-                label="Username"
-                sx={{ marginBottom: "15px", marginTop: "10px" }}
-                onChange={(event) => setSearchTerm(event.target.value)}
-                value={searchTerm}
-              />
+      <DatePicker
+        label="Enter Journal Date"
+        className="form"
+        sx={{ marginBottom: "15px", marginTop: "10px" }}
+        onChange={(val) => setValue(val)}
+        value={value}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default SearchForm
-
+export default SearchForm;

@@ -113,7 +113,7 @@ function MyMood() {
                 <Typography fontWeight="bold">
                   <div className="feeling">
                   <div>Happy</div>
-                  <div className="feeling-icon"> {moodIcons["Happy"]}</div>
+                  {/* <div className="feeling-icon"> {moodIcons["Happy"]}</div> */}
                   </div>
                 </Typography>
               </Button>
@@ -127,7 +127,7 @@ function MyMood() {
                 <Typography fontWeight="bold">
                 <div className="feeling">
                   <div>Positive</div>
-                  <div className="feeling-icon"> {moodIcons["Positive"]}</div>
+                  {/* <div className="feeling-icon"> {moodIcons["Positive"]}</div> */}
                   </div></Typography>
               </Button>
             </Grid>
@@ -176,7 +176,7 @@ function MyMood() {
                 <Typography fontWeight="bold">
                   <div className="feeling">
                   <div>Sad</div>
-                  <div className="feeling-icon"> {moodIcons["Sad"]}</div>
+                  {/* <div className="feeling-icon"> {moodIcons["Sad"]}</div> */}
                   </div></Typography>
               </Button>
             </Grid>

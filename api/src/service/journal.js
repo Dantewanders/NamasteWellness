@@ -20,8 +20,13 @@ exports.createJournal = async (journal) => {// this is the mood object that is p
   return createdJournal
 }
 
-exports.getuserJournalForToday = async (userId) => {
-  const today = new Date();
-  const journal = await knex('journal').where('user_id', userId).where('dateCreated', today.toISOString().substr(0, 10))
+exports.getuserJournalByDate = async (userId, date) => {
+   date = new Date(date);
+  const journal = await knex('journal').where('user_id', userId).where('dateCreated', date.toISOString().substr(0, 10))
   return journal
+}
+
+exports.deleteUserJournal = async (userId, journal_id) => {
+ const journal = await knex('journal').where('user_id', userId).where('journal_id',journal_id).del()
+ return journal
 }

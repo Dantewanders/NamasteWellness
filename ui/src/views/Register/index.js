@@ -1,7 +1,7 @@
 import { Card, CardContent, Grid, Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
-import GamepadIcon from "@mui/icons-material/Gamepad";
+import SpaIcon from "@mui/icons-material/Spa";
 import ListItem from "@mui/material/ListItem";
 import React, { Fragment } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -13,6 +13,10 @@ import "./index.css";
 function RegistrationForm() {
   const [emailValue, SetEmailValue] = useState("");
   const [usernameValue, setUsernameValue] = useState("");
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastName] = useState("");
+  const [date_of_birth, setDateOfBirth] = useState("");
+  const [state, setState] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
   const [retypePasswordValue, setRetypePasswordValue] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
@@ -32,6 +36,10 @@ function RegistrationForm() {
         email: emailValue,
         username: usernameValue.trim(),
         password: passwordValue,
+        first_name: first_name,
+        last_name: last_name,
+        date_of_birth: date_of_birth,
+        state: state,
       });
 
       // console.log('token value', tokenValue.token)
@@ -58,14 +66,18 @@ function RegistrationForm() {
     <Fragment>
       <Grid container direction="row" justifyContent="center">
         <Card
+        size="lg"
           className="form-container"
           sx={{
+            width: "400px",
+            height:"auto",
+            background :"#fff",
             borderRadius: "20px",
             boxShadow: "3px 2px 7px rgb(0, 0, 0, 0.5)",
           }}
         >
           <CardContent sx={{ display: "grid", margin: "20px" }}>
-            <GamepadIcon
+            <SpaIcon
               sx={{ display: "flex", justifySelf: "center", color: "#42a5f5" }}
             />
             <Typography
@@ -89,6 +101,36 @@ function RegistrationForm() {
 
             <Grid container direction="column" justify="center">
               <TextField
+          
+                className="form"
+                label="First Name"
+                sx={{ marginBottom: "15px", border :"1px solid white", marginTop: "10px" ,marginLeft:"0px", marginRight:"0px" }}
+                onChange={(first_name) => setFirstName(first_name.target.value)}
+                value={first_name}
+              />
+              <TextField
+                className="form"
+                label="Last Name"
+                sx={{ marginBottom: "15px", marginTop: "10px" }}
+                onChange={(e) => setLastName(e.target.value)}
+                value={last_name}
+              />
+
+              <TextField
+                className="form"
+                label="Date of Birth (YYYY-MM-DD) "
+                sx={{ marginBottom: "15px", marginTop: "10px" }}
+                onChange={(e) => setDateOfBirth(e.target.value)}
+                value={date_of_birth}
+              />
+              <TextField
+                className="form"
+                label="State"
+                sx={{ marginBottom: "15px", marginTop: "10px" }}
+                onChange={(e) => setState(e.target.value)}
+                value={state}
+              />
+              <TextField
                 className="form"
                 label="Email"
                 sx={{ marginBottom: "15px", marginTop: "10px" }}
@@ -102,6 +144,7 @@ function RegistrationForm() {
                 sx={{ marginBottom: "15px" }}
                 onChange={(username) => setUsernameValue(username.target.value)}
                 value={usernameValue}
+                autoComplete="off"
               />
 
               <TextField
@@ -111,6 +154,7 @@ function RegistrationForm() {
                 sx={{ marginBottom: "15px" }}
                 onChange={(password) => setPasswordValue(password.target.value)}
                 value={passwordValue}
+                autoComplete="off"
               />
 
               <TextField

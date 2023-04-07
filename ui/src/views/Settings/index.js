@@ -54,7 +54,7 @@ function Settings(props) {
           id="outlined-password-input"
           label="Password"
           type="password"
-          sx={{ marginBottom: "5px" }}
+          sx={{ marginBottom: "5px", borderRadius:"25px", background: "#fff"}}
           onChange={(password) => setPasswordValue(password.target.value)}
           value={passwordValue}
         />

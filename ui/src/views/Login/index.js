@@ -27,7 +27,7 @@ function LoginForm() {
 
       console.log('login response', tokenValue);
 
-      // console.log('token value:', tokenValue.token)
+      console.log('token value==>:', tokenValue.token)
 
       setToken(tokenValue.token);
 
@@ -123,7 +123,8 @@ function LoginForm() {
                 display: "flex",
                 justifySelf: "center",
               }}
-              onClick={() => handleSignIn()}
+              onClick={handleSignIn}
+
             >
               Sign in
             </Button>

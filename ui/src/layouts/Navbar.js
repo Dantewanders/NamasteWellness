@@ -22,7 +22,7 @@ function Navbar() {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [user, setUser] = useState(null);
-  console.log(user);
+
   // console.log("user: ", user.username)
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -47,11 +47,14 @@ function Navbar() {
       const token = getToken();
       //fetch user's data
       getUser(token)
-        .then((data) => setUser(data))
+        .then((data) =>{
+          setUser(data) 
+        })
 
         .catch((error) => console.log(error));
     }
   }, []);
+
 
   const settings = [
     {
@@ -61,6 +64,10 @@ function Navbar() {
     {
       label: "Settings",
       path: "/user/settings",
+    },
+    {
+      label: "My Journals",
+      path: "/myjournals",
     },
     {
       label: "Resources",

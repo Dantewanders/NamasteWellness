@@ -24,10 +24,8 @@ function JournalContainer() {
   };
 
   return (
-    <div>
-      <h4>Share how you are feeling and how this moment may be remembered.</h4>
-
-      <form onSubmit={handleSubmitJournal}>
+    
+    <div><form onSubmit={handleSubmitJournal}>
         <label>
           <TextField
             fullWidth
@@ -37,7 +35,7 @@ function JournalContainer() {
             focused
             id="fullWidth box"
             multiline
-            maxRows={25}
+            maxRows={45}
             type="text"
             name="entry"
             onChange={(e) => setThoughts(e.target.value)}
@@ -47,12 +45,7 @@ function JournalContainer() {
         <br />
         <br />
         <button type="submit">Submit your Journal</button>
-        <br /><br />
-        <br /><br />
-        <br /><br />
-        <br /><br />
-        <br /><br />
-        <br /><br />
+       
          
       </form>
     </div>

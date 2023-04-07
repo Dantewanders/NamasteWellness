@@ -23,11 +23,10 @@ function MyWellness() {
   const [author, setAuthor] = useState("");
   // const [dateCreated, setDateCreated] = useState("");
   const navigate = useNavigate();
-  
 
   const getJournal = async () => {
     const token = getToken();
-    const response = await getMyJournal(token);
+    const response = await getMyJournal(new Date(), token);
     const result = await response.json();
     console.log("res", result);
     // setDateCreated(result[0].dateCreated);
@@ -54,12 +53,6 @@ function MyWellness() {
     getJournal();
     getQuote();
   }, []);
-  // const bull = (
-  //   <Box
-  //     // component=" span "
-  //     sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  //   ></Box>
-  // );
 
   const quoteCard = (
     <Fragment>
@@ -144,27 +137,38 @@ function MyWellness() {
         marginBottom="20px"
         marginTop="20px"
       >
-        <Typography align="center" fontSize="32px" fontWeight="bold" mb={3}>
-          My Wellness
-        </Typography>
+        <Typography
+          align="center"
+          fontSize="32px"
+          fontWeight="bold"
+          mb={3}
+        ></Typography>
 
-        <Typography variant="body1">
-          Your mental health takes in many factors, including your mood, sleep,
-          energy, and thoughts. We at Namaste Wellness endeavor to share a
-          journal oo these for your personal insight and to share with your
-          healthcare professionl. The journal is a way to hod on to the
-          information that molds our mental health. We can track your mood daily
-          with simple terms which may best embody your current state. Your sleep
-          as we know effects our physical and mental health. Getting the rest we
-          need may not always be attainable, lets track how that effects your
-          mood. Your energy, we belove is a direct relation to your overall mood
-          and behaviors. Seeing the correation between sleep, enery and moods we
-          finalize that moment with a short journal entry to capture that days
-          feeling.
-        </Typography>
+        <Card sx={{ maxWidth: 1000, borderRadius: "25px", opacity: "inherit" }}>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              My Wellness
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              Your mental health takes in many factors, including your mood,
+              sleep, energy, and thoughts. We at Namaste Wellness endeavor to
+              share a journal that tracks these factors for your personal
+              insight and/or to share with your healthcare professional. The
+              journal is a way to hold on to the information that molds our
+              mental health. We can track your mood daily, with simple terms
+              which may best embody your current state. Your sleep as we know
+              effects our physical and mental health. Getting the rest we need
+              may not always be attainable, lets track how that effects your
+              mood. Your energy, we know is a direct relation to your overall
+              mood and behaviors. Seeing the correlation between sleep, energy
+              and moods we hold that moment with a short journal entry to
+              capture that days feelings.
+            </Typography>
+          </CardContent>
+        </Card>
       </Grid>
       <Typography align="center" fontSize="32px" fontWeight="bold">
-        Your Journal
+        Todays Vision
       </Typography>
       <Grid
         container

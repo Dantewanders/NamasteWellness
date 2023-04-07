@@ -7,7 +7,7 @@ const theme = createTheme({
       main: "#bed4ad",
     },
     secondary: {
-      main: "#ffb300",
+      main: "#f2f2f2",
     },
     info: {
       main: "#052d46",
