@@ -14,12 +14,11 @@ function Resources() {
     <Fragment>
       <Grid
         container
-        direction="flex"
+        direction="column"
         justifyContent="center"
         alignItems="center"
-        spacing={3}
-        m="50px"
-      >
+        mt="40px"
+              >
         <Grid item>
           <Typography variant="h5" fontWeight="bold" mb="20px">
             Finding Help: When to Get It and Where to Go
@@ -34,7 +33,7 @@ function Resources() {
             to a medical or mental health professional.
           </Typography>
         </Grid>
-        <Grid item>
+        <Grid item xs={12} sm={4}>
           <Card
             sx={{ maxWidth: 800, borderRadius: "25px", opacity: "inherit" }}
           >
@@ -123,7 +122,7 @@ function Resources() {
         </Grid>
         <Grid item>
           <Card
-            sx={{ maxWidth: 800, borderRadius: "25px", opacity: "inherit" }}
+            sx={{ maxWidth: 800, borderRadius: "25px", opacity: "inherit", marginTop: "20px" }}
           >
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -188,7 +187,7 @@ function Resources() {
         </Grid>
         <Grid item>
           <Card
-            sx={{ maxWidth: 800, borderRadius: "25px", opacity: "inherit" }}
+            sx={{ maxWidth: 800, borderRadius: "25px", opacity: "inherit",  marginTop: "20px" }}
           >
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">

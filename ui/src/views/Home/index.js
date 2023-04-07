@@ -55,12 +55,17 @@ function Home(props) {
         </Grid>
       </Box>
 
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container direction="row" margin={2} spacing={4} marginTop="20px">
+      <Box align="center">
+        <Grid container 
+        direction="row" 
+        margin={2} 
+        spacing={4} 
+        marginTop="20px">
+
           <Grid item xs={8} sm={5}>
             <Card
               sx={{
-                maxWidth: 400,
+                maxWidth: 600,
                 borderRadius: "25px",
                 opacity: "inherit",
                 marginLeft: "20px",
@@ -89,106 +94,109 @@ function Home(props) {
               </CardContent>
             </Card>{" "}
           </Grid>
-
-          <Grid item xs={12} sm={4}>
-            <Card
-              sx={{
-                maxWidth: 380,
-                borderRadius: "25px",
-                opacity: "inherit",
-                marginTop: "10px",
-                padding: "5px",
-              }}
-            >
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  variant="h5"
-                  component="div"
-                  align="center"
-                >
-                  What affects your mood?
-                </Typography>
-
-                <Typography variant="body2" color="text.secondary">
-                  <Grid
-                    container
-                    rowSpacing={1}
-                    columnSpacing={{ xs: 1 }}
-                    mt="3px"
-                  >
-                    <Grid item xs={6}>
-                      <ListItem sx={{ display: "list-item" }}>Sleep</ListItem>
-                    </Grid>
-
-                    <Grid item xs={6}>
-                      <ListItem sx={{ display: "list-item" }}>
-                        The News
-                      </ListItem>
-                    </Grid>
-
-                    <Grid item xs={6}>
-                      <ListItem sx={{ display: "list-item" }}>Stress</ListItem>
-                    </Grid>
-
-                    <Grid item xs={6}>
-                      <ListItem sx={{ display: "list-item" }}>Work</ListItem>
-                    </Grid>
-
-                    <Grid item xs={6}>
-                      <ListItem sx={{ display: "list-item" }}>Family</ListItem>
-                    </Grid>
-
-                    <Grid item xs={6}>
-                      <ListItem sx={{ display: "list-item" }}>Money</ListItem>
-                    </Grid>
-
-                    <Grid item xs={6}>
-                      <ListItem sx={{ display: "list-item" }}>
-                        Diet & Hunger
-                      </ListItem>
-                    </Grid>
-
-                    <Grid item xs={6}>
-                      <ListItem sx={{ display: "list-item" }}>
-                        Hormones
-                      </ListItem>
-                    </Grid>
-
-                    <Grid item xs={6}>
-                      <ListItem sx={{ display: "list-item" }}>
-                        Physical Health
-                      </ListItem>
-                    </Grid>
-                    <Grid item xs={6}>
-                      <ListItem sx={{ display: "list-item" }}>
-                        Past Trauma
-                      </ListItem>
-                    </Grid>
-
-                    <Grid item xs={6}>
-                      <ListItem sx={{ display: "list-item" }}>
-                        Current Trauma
-                      </ListItem>
-                    </Grid>
-                  </Grid>
-                </Typography>
-              </CardContent>
-            </Card>{" "}
-          </Grid>
         </Grid>
         <Box align="center">
           <Grid
             container
-            direction="column"
+            direction="row"
             margin={2}
-            spacing={2}
+            spacing={4}
             marginTop="20px"
           >
-            <Grid item xs={8} sm={4}>
+            <Grid item xs={12} sm={4}>
               <Card
                 sx={{
-                  maxWidth: 450,
+                  maxWidth: 600,
+                  borderRadius: "25px",
+                  opacity: "inherit",
+                  marginLeft: "20px",
+                  marginTop: "10px",
+                }}
+              >
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                    align="center"
+                  >
+                    What affects your mood?
+                  </Typography>
+
+                  <Typography variant="body2" color="text.secondary">
+                    <Grid
+                      container
+                      rowSpacing={1}
+                      columnSpacing={{ xs: 1 }}
+                      mt="3px"
+                    >
+                      <Grid item xs={6}>
+                        <ListItem sx={{ display: "list-item" }}>Sleep</ListItem>
+                      </Grid>
+
+                      <Grid item xs={6}>
+                        <ListItem sx={{ display: "list-item" }}>
+                          The News
+                        </ListItem>
+                      </Grid>
+
+                      <Grid item xs={6}>
+                        <ListItem sx={{ display: "list-item" }}>
+                          Stress
+                        </ListItem>
+                      </Grid>
+
+                      <Grid item xs={6}>
+                        <ListItem sx={{ display: "list-item" }}>Work</ListItem>
+                      </Grid>
+
+                      <Grid item xs={6}>
+                        <ListItem sx={{ display: "list-item" }}>
+                          Family
+                        </ListItem>
+                      </Grid>
+
+                      <Grid item xs={6}>
+                        <ListItem sx={{ display: "list-item" }}>Money</ListItem>
+                      </Grid>
+
+                      <Grid item xs={6}>
+                        <ListItem sx={{ display: "list-item" }}>
+                          Diet & Hunger
+                        </ListItem>
+                      </Grid>
+
+                      <Grid item xs={6}>
+                        <ListItem sx={{ display: "list-item" }}>
+                          Hormones
+                        </ListItem>
+                      </Grid>
+
+                      <Grid item xs={6}>
+                        <ListItem sx={{ display: "list-item" }}>
+                          Physical Health
+                        </ListItem>
+                      </Grid>
+                      <Grid item xs={6}>
+                        <ListItem sx={{ display: "list-item" }}>
+                          Past Trauma
+                        </ListItem>
+                      </Grid>
+
+                      <Grid item xs={6}>
+                        <ListItem sx={{ display: "list-item" }}>
+                          Current Trauma
+                        </ListItem>
+                      </Grid>
+                    </Grid>
+                  </Typography>
+                </CardContent>
+              </Card>{" "}
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Card
+                sx={{
+                  maxWidth: 600,
                   borderRadius: "25px",
                   opacity: "inherit",
                   marginTop: "20px",

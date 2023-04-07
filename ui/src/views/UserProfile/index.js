@@ -1,11 +1,10 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { getUserProfile } from "../../utility/api";
 import Grid from "@mui/material/Grid";
 import { InputLabel } from "@mui/material";
 import Box from "@mui/material/Box";
 import InputUnstyled from "@mui/base/InputUnstyled";
-import * as React from "react";
 import { styled } from "@mui/system";
 
 const blue = {
@@ -72,7 +71,7 @@ const CustomInput = React.forwardRef(function CustomInput(props, ref) {
 function UnstyledInputIntroduction({ value = "", label = "Input label" }) {
   return (
     <Box sx={{ m: 2 }}>
-      {" "}
+      {/* {" "} */}
       <InputLabel style={{ color: "#fff" }}>{label}</InputLabel>{" "}
       <CustomInput
         label="Dante"
