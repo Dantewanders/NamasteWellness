@@ -13,56 +13,53 @@ import smiley from "../../Images/smiley.jpg";
 function Home(props) {
   return (
     <Fragment>
-      <Box sx={{ flexGrow: 1 }}>
+      <Grid
+        container
+        direction="column"
+        alignContent="center"
+        margin={1}
+        spacing={3}
+        marginTop="20px"
+        marginLeft="20px"
+      >
+        <Grid item xs={12} sm={4}>
+          <Card
+            sx={{
+              align: "center",
+              maxWidth: 800,
+              borderRadius: "25px",
+              opacity: "inherit",
+            }}
+          >
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Monitoring your mental health
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Understanding your mental health helps you manage your emotions
+                and feel better. If you are more aware of your mental health,
+                you may be able to better manage your lifestyle, make informed
+                decisions, prevent or avoid triggers, and work towards a better
+                quality of life. The trick is to watch for changes in your mood,
+                particularly any very high swings or very low dips.
+                Self-monitoring your mental health with Namaste Wellness takes
+                hardly any time. And as you make it part of your daily routine
+                you'll find it becomes very simple. Namaste Wellness provides
+                graphical analysis of your posts over time, helping to find and
+                identify patterns and to help you focus on what matters.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
         <Grid
           container
-          direction="column"
-          align="center"
-          margin={2}
-          spacing={4}
-          marginTop="20px"
+          direction="row"
+          alignItems="right"
+          justifyContent="center"
+          margin={1}
+          spacing={2}
         >
-          <Grid item xs={12} sm={4}>
-            <Card
-              sx={{
-                align: "center",
-                maxWidth: 800,
-                borderRadius: "25px",
-                opacity: "inherit",
-              }}
-            >
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Monitoring your mental health
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  Understanding your mental health helps you manage your
-                  emotions and feel better. If you are more aware of your mental
-                  health, you may be able to better manage your lifestyle, make
-                  informed decisions, prevent or avoid triggers, and work
-                  towards a better quality of life. The trick is to watch for
-                  changes in your mood, particularly any very high swings or
-                  very low dips. Self-monitoring your mental health with Namaste
-                  Wellness takes hardly any time. And as you make it part of
-                  your daily routine you'll find it becomes very simple. Namaste
-                  Wellness provides graphical analysis of your posts over time,
-                  helping to find and identify patterns and to help you focus on
-                  what matters.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
-      </Box>
-
-      <Box align="center">
-        <Grid container 
-        direction="row" 
-        margin={2} 
-        spacing={4} 
-        marginTop="20px">
-
-          <Grid item xs={8} sm={5}>
+          <Grid item xs={12} sm={6}>
             <Card
               sx={{
                 maxWidth: 600,
@@ -95,203 +92,188 @@ function Home(props) {
             </Card>{" "}
           </Grid>
         </Grid>
-        <Box align="center">
-          <Grid
-            container
-            direction="row"
-            margin={2}
-            spacing={4}
-            marginTop="20px"
-          >
-            <Grid item xs={12} sm={4}>
-              <Card
-                sx={{
-                  maxWidth: 600,
-                  borderRadius: "25px",
-                  opacity: "inherit",
-                  marginLeft: "20px",
-                  marginTop: "10px",
-                }}
-              >
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                    align="center"
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          margin={1}
+          spacing="10px"
+        >
+          <Grid item xs={12} sm={4}>
+            <Card
+              sx={{
+                maxWidth: 500,
+                height: 400,
+                borderRadius: "25px",
+                opacity: "inherit",
+                marginTop: "10px",
+                padding: "10px",
+              }}
+            >
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                  align="center"
+                >
+                  What affects your mood?
+                </Typography>
+
+                <Typography variant="body2" color="text.secondary">
+                  <Grid
+                    container
+                    rowSpacing={1}
+                    columnSpacing={{ xs: 1 }}
+                    mt="3px"
                   >
-                    What affects your mood?
-                  </Typography>
-
-                  <Typography variant="body2" color="text.secondary">
-                    <Grid
-                      container
-                      rowSpacing={1}
-                      columnSpacing={{ xs: 1 }}
-                      mt="3px"
-                    >
-                      <Grid item xs={6}>
-                        <ListItem sx={{ display: "list-item" }}>Sleep</ListItem>
-                      </Grid>
-
-                      <Grid item xs={6}>
-                        <ListItem sx={{ display: "list-item" }}>
-                          The News
-                        </ListItem>
-                      </Grid>
-
-                      <Grid item xs={6}>
-                        <ListItem sx={{ display: "list-item" }}>
-                          Stress
-                        </ListItem>
-                      </Grid>
-
-                      <Grid item xs={6}>
-                        <ListItem sx={{ display: "list-item" }}>Work</ListItem>
-                      </Grid>
-
-                      <Grid item xs={6}>
-                        <ListItem sx={{ display: "list-item" }}>
-                          Family
-                        </ListItem>
-                      </Grid>
-
-                      <Grid item xs={6}>
-                        <ListItem sx={{ display: "list-item" }}>Money</ListItem>
-                      </Grid>
-
-                      <Grid item xs={6}>
-                        <ListItem sx={{ display: "list-item" }}>
-                          Diet & Hunger
-                        </ListItem>
-                      </Grid>
-
-                      <Grid item xs={6}>
-                        <ListItem sx={{ display: "list-item" }}>
-                          Hormones
-                        </ListItem>
-                      </Grid>
-
-                      <Grid item xs={6}>
-                        <ListItem sx={{ display: "list-item" }}>
-                          Physical Health
-                        </ListItem>
-                      </Grid>
-                      <Grid item xs={6}>
-                        <ListItem sx={{ display: "list-item" }}>
-                          Past Trauma
-                        </ListItem>
-                      </Grid>
-
-                      <Grid item xs={6}>
-                        <ListItem sx={{ display: "list-item" }}>
-                          Current Trauma
-                        </ListItem>
-                      </Grid>
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>Sleep</ListItem>
                     </Grid>
-                  </Typography>
-                </CardContent>
-              </Card>{" "}
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <Card
-                sx={{
-                  maxWidth: 600,
-                  borderRadius: "25px",
-                  opacity: "inherit",
-                  marginTop: "20px",
-                  padding: "10px",
-                }}
-              >
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    variant="h5"
-                    component="div"
-                    align="center"
-                  >
-                    Possible causes of a negative mood may include:
-                  </Typography>
 
-                  <Typography variant="body2" color="text.secondary">
-                    <Grid
-                      container
-                      rowSpacing={1}
-                      columnSpacing={{ xs: 1 }}
-                      mt="3px"
-                    >
-                      <Box width="600px">
-                        <Grid
-                          container
-                          rowSpacing={1}
-                          columnSpacing={{ xs: 1 }}
-                          mt="3px"
-                        >
-                          <Grid item xs={6}>
-                            <ListItem sx={{ display: "list-item" }}>
-                              Poor Sleep
-                            </ListItem>
-                          </Grid>
-
-                          <Grid item xs={6}>
-                            <ListItem sx={{ display: "list-item" }}>
-                              Depression
-                            </ListItem>
-                          </Grid>
-
-                          <Grid item xs={6}>
-                            <ListItem sx={{ display: "list-item" }}>
-                              Substance Abuse
-                            </ListItem>
-                          </Grid>
-
-                          <Grid item xs={6}>
-                            <ListItem sx={{ display: "list-item" }}>
-                              Medication
-                            </ListItem>
-                          </Grid>
-
-                          <Grid item xs={6}>
-                            <ListItem sx={{ display: "list-item" }}>
-                              Physical Illness
-                            </ListItem>
-                          </Grid>
-
-                          <Grid item xs={6}>
-                            <ListItem sx={{ display: "list-item" }}>
-                              Poor Nutrition
-                            </ListItem>
-                          </Grid>
-
-                          <Grid item xs={6}>
-                            <ListItem sx={{ display: "list-item" }}>
-                              Relationship Issues
-                            </ListItem>
-                          </Grid>
-
-                          <Grid item xs={6}>
-                            <ListItem sx={{ display: "list-item" }}>
-                              Anxiety
-                            </ListItem>
-                          </Grid>
-
-                          <Grid item xs={6}>
-                            <ListItem sx={{ display: "list-item" }}>
-                              Bipolar Disorder
-                            </ListItem>
-                          </Grid>
-                        </Grid>
-                      </Box>
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        The News
+                      </ListItem>
                     </Grid>
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>Stress</ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>Work</ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>Family</ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>Money</ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        Diet & Hunger
+                      </ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        Hormones
+                      </ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        Physical Health
+                      </ListItem>
+                    </Grid>
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        Past Trauma
+                      </ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        Current Trauma
+                      </ListItem>
+                    </Grid>
+                  </Grid>
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-        </Box>
 
+          <Grid item xs={12} sm={4}>
+            <Card
+              sx={{
+                maxWidth: 500,
+                height: 400,
+                borderRadius: "25px",
+                opacity: "inherit",
+                marginTop: "10px",
+                padding: "10px",
+              }}
+            >
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  variant="h5"
+                  component="div"
+                  align="center"
+                >
+                  Possible causes of a negative mood may include:
+                </Typography>
+
+                <Typography variant="body2" color="text.secondary">
+                  <Grid
+                    container
+                    rowSpacing={1}
+                    columnSpacing={{ xs: 1 }}
+                    mt="3px"
+                  >
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        Poor Sleep
+                      </ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        Depression
+                      </ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        Substance Abuse
+                      </ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        Medication
+                      </ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        Physical Illness
+                      </ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        Poor Nutrition
+                      </ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        Relationship Issues
+                      </ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>Anxiety</ListItem>
+                    </Grid>
+
+                    <Grid item xs={6}>
+                      <ListItem sx={{ display: "list-item" }}>
+                        Bipolar Disorder
+                      </ListItem>
+                    </Grid>
+                  </Grid>
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
         <Grid item>
-          <Typography textAlign="center" padding={5}>
+          <Typography textAlign="center" padding={2} marginRight={10}>
             <h5>
               Namaste Wellness can help in a simple yet intuitive way. Let us
               help monitor your mental health, for a personal insight or to
@@ -299,36 +281,39 @@ function Home(props) {
             </h5>
           </Typography>
         </Grid>
-      </Box>
+        <Grid>
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            container
+            direction="column"
+            justifyContent="center"
+            alignItems="center"
+            marginLeft={44}
+          >
+            <CardMedia
+              component="img"
+              image={screenshot}
+              alt="Namaste Wellness Screenshot"
+            />
+          </Grid>
+        </Grid>
 
-      <Box align="center">
-        <Box
-          component="img"
-          sx={{
-            width: "650px",
-            justifyContent: "center",
-            boxShadow: "3px 2px 7px rgb(0, 0, 0, 0.3)",
-            borderRadius: "25px",
-          }}
-          alt="Namaste Wellness Screenshot"
-          img
-          src={screenshot}
-        />
-        {/* <Typography>
-            <img src={sleep} alt="sleep" />
-          </Typography> */}
-      </Box>
-
-      <Grid
-        container
-        direction="column"
-        justifyContent="center"
-        alignItems="center"
-      >
-        <Typography variant="h5" mt="30px" mb="15px">
-          Lets get started with your Wellness Today!
-        </Typography>
-        <MyWellnessButton />
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          container
+          direction="column"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <Typography variant="h5" mt="30px" mb="15px">
+            Lets get started with your Wellness Today!
+          </Typography>
+          <MyWellnessButton />
+        </Grid>
       </Grid>
     </Fragment>
   );

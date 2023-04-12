@@ -2,7 +2,7 @@ import React from "react";
 import { Fragment } from "react";
 import { Typography } from "@mui/material";
 import CardContent from "@mui/material/CardContent";
-import Box from "@mui/material/Box";
+
 
 function quoteCard() {
   return (
@@ -18,7 +18,7 @@ function quoteCard() {
         <Typography variant="body2">
           Body 2 text
           <br />
-          {'"text"'}
+       
         </Typography>
       </CardContent>
     </Fragment>

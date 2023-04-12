@@ -60,14 +60,7 @@ function MyMood() {
   }
   return (
     <Fragment>
-      <Box width="800px" mt="10px" ml="20px"></Box>
-      <Grid
-        container
-        direction="column"
-        justifyContent="center"
-        alignItems="center"
-        marginBottom="20px"
-      >
+      <Grid marginBottom="20px" marginLeft={10} maxWidth={1200}>
         <Grid item mt="20px" mb="20px">
           <Typography variant="h5" fontWeight="bold">
             Monitoring your Mood
@@ -87,158 +80,158 @@ function MyMood() {
           <Typography>
             <p></p>
           </Typography>
-          <Grid>
-            <Typography align="center" fontSize="25px" fontWeight="bold">
-              How do You feel today?
-            </Typography>
-          </Grid>
-          <Grid
-            container
-            direction="row"
-            justifyContent="center"
-            alignItems="center"
-            rowSpacing={5}
-            columnSpacing={10}
-            style={{ maxWidth: "1500px" }}
-            marginTop="20px"
-            marginBottom="50px"
-          >
-            <Grid item>
-              <Button
-                variant="contained"
-                onClick={() => handleSelectMood("Happy")}
-                color={Mood === "Happy" ? "success" : "primary"}
-              >
-                <Typography fontWeight="bold">
-                  <div className="feeling">
-                    <div>Happy</div>
-                    {/* <div className="feeling-icon"> {moodIcons["Happy"]}</div> */}
-                  </div>
-                </Typography>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                onClick={() => handleSelectMood("Positive")}
-                color={Mood === "Positive" ? "success" : "primary"}
-              >
-                <Typography fontWeight="bold">
-                  <div className="feeling">
-                    <div>Positive</div>
-                    {/* <div className="feeling-icon"> {moodIcons["Positive"]}</div> */}
-                  </div>
-                </Typography>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                onClick={() => handleSelectMood("Reflective")}
-                color={Mood === "Reflective" ? "success" : "primary"}
-              >
-                <Typography fontWeight="bold">Reflective</Typography>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                onClick={() => handleSelectMood("Irritated")}
-                color={Mood === "Irritated" ? "success" : "primary"}
-              >
-                <Typography fontWeight="bold">Irritated</Typography>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                onClick={() => handleSelectMood("Hurt")}
-                color={Mood === "Hurt" ? "success" : "primary"}
-              >
-                <Typography fontWeight="bold">Hurt</Typography>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                onClick={() => handleSelectMood("Ashamed")}
-                color={Mood === "Ashamed" ? "success" : "primary"}
-              >
-                <Typography fontWeight="bold">Ashamed</Typography>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                onClick={() => handleSelectMood("Sad")}
-                color={Mood === "Sad" ? "success" : "primary"}
-              >
-                <Typography fontWeight="bold">
-                  <div className="feeling">
-                    <div>Sad</div>
-                    {/* <div className="feeling-icon"> {moodIcons["Sad"]}</div> */}
-                  </div>
-                </Typography>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                onClick={() => handleSelectMood("Loved")}
-                color={Mood === "Loved" ? "success" : "primary"}
-              >
-                <Typography fontWeight="bold">Loved</Typography>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                onClick={() => handleSelectMood("Optimistic")}
-                color={Mood === "Optimistic" ? "success" : "primary"}
-              >
-                <Typography fontWeight="bold">Optimistic</Typography>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                onClick={() => handleSelectMood("Angry")}
-                color={Mood === "Angry" ? "success" : "primary"}
-              >
-                <Typography fontWeight="bold">Angry</Typography>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                onClick={() => handleSelectMood("Calm")}
-                color={Mood === "Calm" ? "success" : "primary"}
-              >
-                <Typography fontWeight="bold">Calm</Typography>
-              </Button>
-            </Grid>
-            <Grid item>
-              <Button
-                variant="contained"
-                onClick={() => handleSelectMood("Bored")}
-                color={Mood === "Bored" ? "success" : "primary"}
-              >
-                <Typography fontWeight="bold">Bored</Typography>
-              </Button>
-            </Grid>
-          </Grid>
         </Grid>
-        <Grid align="center" mt="40px">
-          <Typography color="red" fontSize="18px" mb="15px">
-            {errorMsg}
+        <Grid>
+          <Typography align="center" fontSize="25px" fontWeight="bold">
+            How do You feel today?
           </Typography>
-
-          <Button variant="contained" color="secondary" onClick={handleStart}>
-            <Typography fontWeight="bold" fontSize="15px">
-              Continue Journal
-            </Typography>
-          </Button>
         </Grid>
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          rowSpacing={5}
+          columnSpacing={10}
+          style={{ maxWidth: "1500px" }}
+          marginTop="20px"
+          marginBottom="50px"
+        >
+          <Grid item>
+            <Button
+              variant="contained"
+              onClick={() => handleSelectMood("Happy")}
+              color={Mood === "Happy" ? "success" : "primary"}
+            >
+              <Typography fontWeight="bold">
+                <div className="feeling">
+                  <div>Happy</div>
+                  {/* <div className="feeling-icon"> {moodIcons["Happy"]}</div> */}
+                </div>
+              </Typography>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              onClick={() => handleSelectMood("Positive")}
+              color={Mood === "Positive" ? "success" : "primary"}
+            >
+              <Typography fontWeight="bold">
+                <div className="feeling">
+                  <div>Positive</div>
+                  {/* <div className="feeling-icon"> {moodIcons["Positive"]}</div> */}
+                </div>
+              </Typography>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              onClick={() => handleSelectMood("Reflective")}
+              color={Mood === "Reflective" ? "success" : "primary"}
+            >
+              <Typography fontWeight="bold">Reflective</Typography>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              onClick={() => handleSelectMood("Irritated")}
+              color={Mood === "Irritated" ? "success" : "primary"}
+            >
+              <Typography fontWeight="bold">Irritated</Typography>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              onClick={() => handleSelectMood("Hurt")}
+              color={Mood === "Hurt" ? "success" : "primary"}
+            >
+              <Typography fontWeight="bold">Hurt</Typography>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              onClick={() => handleSelectMood("Ashamed")}
+              color={Mood === "Ashamed" ? "success" : "primary"}
+            >
+              <Typography fontWeight="bold">Ashamed</Typography>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              onClick={() => handleSelectMood("Sad")}
+              color={Mood === "Sad" ? "success" : "primary"}
+            >
+              <Typography fontWeight="bold">
+                <div className="feeling">
+                  <div>Sad</div>
+                  {/* <div className="feeling-icon"> {moodIcons["Sad"]}</div> */}
+                </div>
+              </Typography>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              onClick={() => handleSelectMood("Loved")}
+              color={Mood === "Loved" ? "success" : "primary"}
+            >
+              <Typography fontWeight="bold">Loved</Typography>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              onClick={() => handleSelectMood("Optimistic")}
+              color={Mood === "Optimistic" ? "success" : "primary"}
+            >
+              <Typography fontWeight="bold">Optimistic</Typography>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              onClick={() => handleSelectMood("Angry")}
+              color={Mood === "Angry" ? "success" : "primary"}
+            >
+              <Typography fontWeight="bold">Angry</Typography>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              onClick={() => handleSelectMood("Calm")}
+              color={Mood === "Calm" ? "success" : "primary"}
+            >
+              <Typography fontWeight="bold">Calm</Typography>
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button
+              variant="contained"
+              onClick={() => handleSelectMood("Bored")}
+              color={Mood === "Bored" ? "success" : "primary"}
+            >
+              <Typography fontWeight="bold">Bored</Typography>
+            </Button>
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid align="center" mt="40px">
+        <Typography color="red" fontSize="18px" mb="15px">
+          {errorMsg}
+        </Typography>
+
+        <Button variant="contained" color="secondary" onClick={handleStart}>
+          <Typography fontWeight="bold" fontSize="15px">
+            Continue Journal
+          </Typography>
+        </Button>
       </Grid>
     </Fragment>
   );

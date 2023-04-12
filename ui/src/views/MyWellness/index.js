@@ -220,7 +220,7 @@ function MyWellness() {
         </Grid>
         <Grid item>
           <Box sx={{ minWidth: 275 }}>
-            <Card variant="outlined">{quoteCard}</Card>
+            <Card variant="outlined" >{quoteCard}</Card>
           </Box>
         </Grid>
       </Grid>

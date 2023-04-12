@@ -20,8 +20,12 @@ function JournalContainer() {
         console.log(response);
         alert("Journal submitted successfully!");
         //redirect after a deley to my wellness page
+        setTimeout(() => {
+          window.location.href = "/mywellness";
+        }, 2000);
+
       })
-      
+      //maybe add asnackbar here
       .catch((err) => console.log("Unable to submit journal"));
   };
 

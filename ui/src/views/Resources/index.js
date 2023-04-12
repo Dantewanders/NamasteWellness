@@ -18,16 +18,16 @@ function Resources() {
         justifyContent="center"
         alignItems="center"
         mt="40px"
-              >
-        <Grid item>
-          <Typography variant="h5" fontWeight="bold" mb="20px">
+      >
+        <Grid item maxWidth={10}>
+          <Typography variant="h5" fontWeight="bold" mb="30px">
             Finding Help: When to Get It and Where to Go
           </Typography>
 
-          <Typography variant="body1">
+          <Typography variant="body1" mb="20px" maxWidth={1300}>
             Mental health disorders are real, common and often treatable. It is
-            estimated that approximately 1 in 5 American adults1 (nearly 44
-            million people) and 13-20% of children2 living in the United States
+            estimated that approximately 1 in 5 American adults (nearly 44
+            million people) and 18% of children living in the United States
             will experience a diagnosable mental health disorder in a given
             year. The following are signs that your loved one may want to speak
             to a medical or mental health professional.
@@ -35,15 +35,15 @@ function Resources() {
         </Grid>
         <Grid item xs={12} sm={4}>
           <Card
-            sx={{ maxWidth: 800, borderRadius: "25px", opacity: "inherit" }}
+            sx={{ maxWidth: 1000, borderRadius: "25px", opacity: "inherit" }}
           >
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                In Adults
+                Adults
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                {/* <Box width="1100px"> */}
-                <Grid container rowSpacing={1} columnSpacing={1} mt="3px">
+                
+                <Grid container rowSpacing={0} columnSpacing={4} mt="3px">
                   <Grid item xs={4}>
                     <ListItem sx={{ display: "list-item" }}>
                       Confused Thinking
@@ -122,15 +122,19 @@ function Resources() {
         </Grid>
         <Grid item>
           <Card
-            sx={{ maxWidth: 800, borderRadius: "25px", opacity: "inherit", marginTop: "20px" }}
+            sx={{
+              maxWidth: 1000,
+              borderRadius: "25px",
+              opacity: "inherit",
+              marginTop: "20px",
+            }}
           >
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                In Adolescents & Young Adults
+                Adolescents & Young Adults
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                {/* <Box width="1100px"> */}
-                <Grid container rowSpacing={1} columnSpacing={1} mt="3px">
+                <Grid container rowSpacing={0} columnSpacing={4} mt="3px">
                   <Grid item xs={4}>
                     <ListItem sx={{ display: "list-item" }}>
                       Substance abuse
@@ -187,15 +191,20 @@ function Resources() {
         </Grid>
         <Grid item>
           <Card
-            sx={{ maxWidth: 800, borderRadius: "25px", opacity: "inherit",  marginTop: "20px" }}
+            sx={{
+              maxWidth: 1000,
+              borderRadius: "25px",
+              opacity: "inherit",
+              marginTop: "20px",
+            }}
           >
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
-                In Younger Children & Pre-Adolescents
+                Younger Children & Pre-Adolescents
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                <Grid container rowSpacing={1} columnSpacing={1} mt="3px">
-                  <Grid container rowSpacing={1} columnSpacing={1} mt="3px">
+                <Grid container rowSpacing={0} columnSpacing={4} mt="3px">
+                  
                     <Grid item xs={4}>
                       <ListItem sx={{ display: "list-item" }}>
                         Changes in school performance
@@ -238,7 +247,7 @@ function Resources() {
                         Frequent temper tantrums
                       </ListItem>
                     </Grid>
-                  </Grid>
+                  
                 </Grid>
               </Typography>
             </CardContent>

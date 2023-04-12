@@ -97,86 +97,83 @@ function MySleep() {
 
   return (
     <Fragment>
-      <Box sx={{ flexGrow: 1 }}>
-        <Grid container direction="row" margin={2} spacing={4}>
-          <Grid item xs={12} sm={4}>
-            <Card
-              sx={{ maxWidth: 400, borderRadius: "25px", opacity: "inherit" }}
-            >
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Monitoring your Sleep
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  There's no denying the importance of sleep in our busy
-                  lifestyles. And there's also no denying that incredible
-                  feeling of waking up after a good night's rest. Unfortunately,
-                  having a restless night of poor sleep is something we have to
-                  deal with from time to time. But learning what causes a good
-                  or bad night's sleep can be hard to identify. Enter Namaste
-                  Wellness.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Card
-              sx={{ maxWidth: 400, borderRadius: "25px", opacity: "inherit" }}
-            >
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  How Does Sleep Impact Energy Levels?
-                </Typography>
-                <CardMedia
-                  component="img"
-                  height="160"
-                  image={sleep}
-                  alt="sleep"
-                />
-                <Typography variant="body2" color="text.secondary">
-                  The relationship between lifestyle choices and sleep also
-                  impacts our energy balance. Energy balance is used to describe
-                  the net outcome of energy intake (food consumption) with
-                  energy expenditure (activity). Insufficient sleep has been
-                  linked to an imbalanced increase in energy intake over
-                  expenditure, which leads to a positive energy balance and
-                  weight gain. Sleep quality may also moderate the relationship
-                  between physical activity and feelings of fatigue. This
-                  indicates that diet, exercise, and sleep all interact and
-                  influence our feelings of energy and our energy balance.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item xs={12} sm={4}>
-            <Card
-              sx={{ maxWidth: 400, borderRadius: "25px", opacity: "inherit" }}
-            >
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  Truth and sleep
-                </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  The benefits of sleep tracking are as flexible as your journey
-                  through life, then. A number that means nothing to you now,
-                  can be the single most important one in a few months. These
-                  quantified truths remain non-judgmental, because you decide
-                  their relevance. You apply the value to them. The data is
-                  nothing without you and it certainly doesn't get to decide who
-                  you are and what you feel like on a certain day. But it helps
-                  you understand yourself. It helps you make informed decisions
-                  on your health. It clears away certain doubts and you can
-                  focus on that which remains, your subjective experience on
-                  your quality of rest and what you need to reach better sleep.
-                  That is the benefit of sleep tracking. That is our mission at
-                  Namaste Wellness, to help you reach better health through
-                  better sleep, one point of truth at a time.
-                </Typography>
-              </CardContent>
-            </Card>
-          </Grid>
+      <Grid container direction="row" margin={2} spacing={2}>
+        <Grid item xs={12} sm={4}>
+          <Card
+            sx={{ maxWidth: 400, borderRadius: "25px", opacity: "inherit" }}
+          >
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Monitoring your Sleep
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                There's no denying the importance of sleep in our busy
+                lifestyles. And there's also no denying that incredible feeling
+                of waking up after a good night's rest. Unfortunately, having a
+                restless night of poor sleep is something we have to deal with
+                from time to time. But learning what causes a good or bad
+                night's sleep can be hard to identify. Enter Namaste Wellness.
+              </Typography>
+            </CardContent>
+          </Card>
         </Grid>
-      </Box>
+        <Grid item xs={12} sm={4}>
+          <Card
+            sx={{ maxWidth: 400, borderRadius: "25px", opacity: "inherit" }}
+          >
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                How Does Sleep Impact Energy Levels?
+              </Typography>
+              <CardMedia
+                component="img"
+                height="160"
+                image={sleep}
+                alt="sleep"
+              />
+              <Typography variant="body2" color="text.secondary">
+                The relationship between lifestyle choices and sleep also
+                impacts our energy balance. Energy balance is used to describe
+                the net outcome of energy intake (food consumption) with energy
+                expenditure (activity). Insufficient sleep has been linked to an
+                imbalanced increase in energy intake over expenditure, which
+                leads to a positive energy balance and weight gain. Sleep
+                quality may also moderate the relationship between physical
+                activity and feelings of fatigue. This indicates that diet,
+                exercise, and sleep all interact and influence our feelings of
+                energy and our energy balance.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <Card
+            sx={{ maxWidth: 400, borderRadius: "25px", opacity: "inherit" }}
+          >
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                Truth and sleep
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                The benefits of sleep tracking are as flexible as your journey
+                through life, then. A number that means nothing to you now, can
+                be the single most important one in a few months. These
+                quantified truths remain non-judgmental, because you decide
+                their relevance. You apply the value to them. The data is
+                nothing without you and it certainly doesn't get to decide who
+                you are and what you feel like on a certain day. But it helps
+                you understand yourself. It helps you make informed decisions on
+                your health. It clears away certain doubts and you can focus on
+                that which remains, your subjective experience on your quality
+                of rest and what you need to reach better sleep. That is the
+                benefit of sleep tracking. That is our mission at Namaste
+                Wellness, to help you reach better health through better sleep,
+                one point of truth at a time.
+              </Typography>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
 
       {/* /second grid */}
 

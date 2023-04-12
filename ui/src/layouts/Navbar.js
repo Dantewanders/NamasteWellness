@@ -67,6 +67,10 @@ function Navbar() {
       path: "/myjournals",
     },
     {
+      label: "My Wellness",
+      path: "/mywellness",
+    },
+    {
       label: "Resources",
       path: "/resources",
     },
