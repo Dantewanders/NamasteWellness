@@ -1,7 +1,6 @@
 import React, { Fragment } from "react";
 import { Grid, Typography } from "@mui/material";
 import ListItem from "@mui/material/ListItem";
-import Box from "@mui/material/Box";
 import MyWellnessButton from "../../components/MyWellnessButton";
 import "./index.css";
 import screenshot from "../../Images/NamasteScreenshot.png";

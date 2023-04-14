@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { getToken } from "../utility/utils";
 import { submitJournal } from "../utility/api";
 import { TextField } from "@mui/material";
+import swal from "sweetalert";
 
 function JournalContainer() {
   const [thoughts, setThoughts] = useState("");
@@ -18,14 +19,15 @@ function JournalContainer() {
     submitJournal(token, journalPayload)
       .then((response) => {
         console.log(response);
-        alert("Journal submitted successfully!");
+        swal("Todays Journal", "Submitted Successfully!", "success");
+        
         //redirect after a deley to my wellness page
         setTimeout(() => {
           window.location.href = "/mywellness";
-        }, 2000);
+        }, 3000);
 
       })
-      //maybe add asnackbar here
+      //maybe add a snackbar here
       .catch((err) => console.log("Unable to submit journal"));
   };
 

@@ -6,16 +6,10 @@ import { useNavigate } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { isUserLoggedIn } from "../../utility/utils";
 import "./index.css";
-import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
-import SentimentDissatisfiedIcon from "@mui/icons-material/SentimentDissatisfied";
-import SentimentVeryDissatisfiedIcon from "@mui/icons-material/SentimentVeryDissatisfied";
-import Box from "@mui/material/Box";
 
-const moodIcons = {
-  Happy: <EmojiEmotionsIcon />,
-  Positive: <EmojiEmotionsIcon />,
-  Sad: <SentimentVeryDissatisfiedIcon />,
-};
+
+
+
 
 function MyMood() {
   const [Mood, setMood] = useState(""); //this is to select my mood
@@ -106,8 +100,7 @@ function MyMood() {
               <Typography fontWeight="bold">
                 <div className="feeling">
                   <div>Happy</div>
-                  {/* <div className="feeling-icon"> {moodIcons["Happy"]}</div> */}
-                </div>
+                                 </div>
               </Typography>
             </Button>
           </Grid>
@@ -120,7 +113,7 @@ function MyMood() {
               <Typography fontWeight="bold">
                 <div className="feeling">
                   <div>Positive</div>
-                  {/* <div className="feeling-icon"> {moodIcons["Positive"]}</div> */}
+                  
                 </div>
               </Typography>
             </Button>
@@ -170,7 +163,7 @@ function MyMood() {
               <Typography fontWeight="bold">
                 <div className="feeling">
                   <div>Sad</div>
-                  {/* <div className="feeling-icon"> {moodIcons["Sad"]}</div> */}
+                  
                 </div>
               </Typography>
             </Button>

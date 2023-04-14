@@ -8,12 +8,11 @@ import { getToken } from "../../utility/utils";
 import BigButton from "../../components/HomeButton";
 import SearchForm from "../../components/SearchForm";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import moment from "moment";
+
 
 function MyJournals() {
   const [journal, setJournal] = useState(null);
@@ -158,6 +157,7 @@ function MyJournals() {
           style={{ maxWidth: "1600px" }}
           marginTop="20px"
           marginBottom="50px"
+        
         >
           <Grid item>
             <Box sx={{ minWidth: 275 }}>

@@ -16,5 +16,5 @@ app.use(pathLogger);
 router(app);
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+  console.log(`Namaste Wellness listening on port ${port}`);
 });

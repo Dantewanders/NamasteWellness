@@ -39,7 +39,7 @@ exports.getUserJournalForToday = async (req, res) => {
   const { date } = req.query;
   console.log(date, "today");
   try {
-    console.log("i got called");
+    // console.log("i got called");
     const journal = await getuserJournalByDate(req.userId, date);
     res.json(journal);
   } catch (error) {
