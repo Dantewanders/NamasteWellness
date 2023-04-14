@@ -35,7 +35,7 @@ function Resources() {
         </Grid>
         <Grid item xs={12} sm={4}>
           <Card
-            sx={{ maxWidth: 1000, borderRadius: "25px", opacity: "inherit" }}
+            sx={{ maxWidth: 1600, borderRadius: "25px", opacity: "inherit" }}
           >
             <CardContent>
               <Typography gutterBottom variant="h5" component="div">
@@ -43,7 +43,7 @@ function Resources() {
               </Typography>
               <Typography variant="body2" color="text.secondary">
                 
-                <Grid container rowSpacing={0} columnSpacing={4} mt="3px">
+                <Grid container rowSpacing={0} columnSpacing={12} mt="3px">
                   <Grid item xs={4}>
                     <ListItem sx={{ display: "list-item" }}>
                       Confused Thinking
@@ -82,7 +82,7 @@ function Resources() {
 
                   <Grid item xs={4}>
                     <ListItem sx={{ display: "list-item" }}>
-                      Growing inability to cope with daily problems and
+                      Inability to cope with daily problems and
                       activities
                     </ListItem>
                   </Grid>
@@ -123,7 +123,7 @@ function Resources() {
         <Grid item>
           <Card
             sx={{
-              maxWidth: 1000,
+              maxWidth: 1600,
               borderRadius: "25px",
               opacity: "inherit",
               marginTop: "20px",
@@ -167,8 +167,12 @@ function Resources() {
 
                   <Grid item xs={4}>
                     <ListItem sx={{ display: "list-item" }}>
-                      Prolonged negative mood, often accompanied by poor
-                      appetite or thoughts of death
+                      Prolonged negative mood (depression or irritability)
+                    </ListItem>
+                  </Grid>
+                  <Grid item xs={4}>
+                    <ListItem sx={{ display: "list-item" }}>
+                      Loss of appitite and thoughts of death
                     </ListItem>
                   </Grid>
 
@@ -192,7 +196,7 @@ function Resources() {
         <Grid item>
           <Card
             sx={{
-              maxWidth: 1000,
+              maxWidth: 1600,
               borderRadius: "25px",
               opacity: "inherit",
               marginTop: "20px",
@@ -219,7 +223,7 @@ function Resources() {
 
                     <Grid item xs={4}>
                       <ListItem sx={{ display: "list-item" }}>
-                        Excessive worry or anxiety (i.e. refusing to go to bed
+                        Excessive anxiety (refusing to go to bed
                         or school)
                       </ListItem>
                     </Grid>

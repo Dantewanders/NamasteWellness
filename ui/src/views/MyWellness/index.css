@@ -5,3 +5,10 @@
 .link:hover {
   text-decoration: underline;
 }
+.Card {
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  box-shadow: 0px 0px 30px, "#24292f" "#24292f";
+  margin-bottom: 1rem;
+  padding: 1rem;
+}

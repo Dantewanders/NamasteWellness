@@ -28,7 +28,7 @@ function MyWellness() {
     const token = getToken();
     const response = await getMyJournal(new Date(), token);
     const result = await response.json();
-    console.log("res", result);
+    // console.log("res", result);
     // setDateCreated(result[0].dateCreated);
     setSleep(result[0].sleepDuration);
     setMood(result[0].mood);
@@ -204,7 +204,7 @@ function MyWellness() {
       >
         <Grid item>
           <Box sx={{ minWidth: 275 }}>
-            <Card variant="outlined">{moodCard}</Card>
+            <Card variant="outlined" >{moodCard}</Card>
           </Box>
         </Grid>
 
