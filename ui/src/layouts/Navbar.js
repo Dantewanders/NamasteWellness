@@ -94,7 +94,7 @@ function Navbar() {
             sx={{
               mr: 10,
               display: { xs: "none", md: "flex" },
-              fontFamily: "Roboto",
+              fontFamily: "Oxygen",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
@@ -156,7 +156,7 @@ function Navbar() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
+              fontFamily: "Oxygen",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",

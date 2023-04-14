@@ -65,7 +65,7 @@ function Settings(props) {
         </Snackbar>
       </div>
 
-      <Button onClick={handleSubmit}>Submit</Button>
+      <Button text="#ffff" onClick={handleSubmit}>Submit</Button>
     </Box>
   );
 }

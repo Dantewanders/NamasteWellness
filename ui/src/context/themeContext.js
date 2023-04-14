@@ -2,12 +2,12 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
   palette: {
-    mode: "light",
+    type: 'light',
     primary: {
-      main: "#bed4ad",
+      main: '#a9dab7',
     },
     secondary: {
-      main: "#f2f2f2",
+      main: '#6d6a6d',
     },
     info: {
       main: "#052d46",
@@ -21,8 +21,11 @@ const theme = createTheme({
     htmlFontSize: 14,
     button: {
       fontSize: 15,
-      color:"white",
+      color:"#ffffff",
     },
+  },
+  text: {
+    primary: 'rgba(226,225,225,0.87)',
   },
 
   
