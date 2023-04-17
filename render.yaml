@@ -16,7 +16,7 @@ services:
     plan: free
     env: node
     buildCommand: cd api; yarn
-    startCommand: cd api; yarn start
+    startCommand: cd api; yarn run prod
     buildFilter:
       paths:
         - api/**/*.js
