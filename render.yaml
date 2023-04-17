@@ -23,5 +23,5 @@ services:
 databases:
   - name: database Namaste Wellness
     plan: free
-    databaseName: Namaste
+    databaseName: namaste
     ipAllowList: [] # only allow internal connections
