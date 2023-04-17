@@ -166,7 +166,7 @@ function MyWellness() {
             </Typography>
           </CardContent>
         </Card>
-      </Grid>
+     
       <Typography align="center" fontSize="32px" fontWeight="bold">
         Todays Vision
       </Typography>
@@ -224,6 +224,7 @@ function MyWellness() {
           </Box>
         </Grid>
       </Grid>
+       </Grid>
     </Fragment>
   );
 }
