@@ -1,10 +1,13 @@
-This is my capstone project for JRS Coding school
+This is my capstone project for JRS Coding Bootcamp.
+
 It is built with a tech stack of
 MySQL
 KNEX
 Express
 React
 Node JS
+Styling with Material UI
+App requires Auth login
 The app allows the user to log their moods, sleep, thoughts and feelings. It tracks consequtive days logged and allows the user to journal.
 
 
