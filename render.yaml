@@ -21,7 +21,7 @@ services:
       paths:
         - api/**/*.js
 databases:
-  - name: database Namaste Wellness
+  - name: database_Namaste_Wellness
     plan: free
     databaseName: namaste
     ipAllowList: [] # only allow internal connections
