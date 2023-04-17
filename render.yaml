@@ -15,7 +15,7 @@ services:
     name: namaste_wellness
     plan: free
     env: node
-    buildCommand: cd api; yarn, npx knex migrate:latest
+    buildCommand: cd api; yarn, npx knex migrate:latest , npx knex seed:run --specific=seed-3.quotes.js
     startCommand: cd api; yarn run prod
     buildFilter:
       paths:

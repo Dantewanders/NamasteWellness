@@ -3,6 +3,7 @@
  * @returns { Promise<void> }
  */
 exports.seed = async function (knex) {
+  await knex("quotes").del();
   await knex("quotes").insert([
     {
       quotes_id: 1,
