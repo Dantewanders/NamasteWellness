@@ -12,6 +12,10 @@ The app allows the user to log their moods, sleep, thoughts and feelings. It tra
 
 
 
-![Namaste Wellness](https://user-images.githubusercontent.com/121504846/228036271-b6b335f8-1a84-4dfa-a1ba-a96f6fd77be3.jpg)
+![Screenshot 2023-04-17 082257](https://user-images.githubusercontent.com/121504846/232482787-7a19aa75-8a72-48ac-b4c4-29b8b0b0b6d6.png)
 
-![IMG_4277](https://user-images.githubusercontent.com/121504846/228035793-aa78d7a7-a7ec-4ce1-8524-bbe01c7ee5ce.JPG)
+![IMG_4282](https://user-images.githubusercontent.com/121504846/232482817-844ea4db-e552-425e-9154-4010ac823485.JPG)
+
+![IMG_4277](https://user-images.githubusercontent.com/121504846/232482843-d89a0234-0694-48a2-aef3-54e182936434.JPG)
+
+![Screenshot 2023-04-17 081917](https://user-images.githubusercontent.com/121504846/232482880-e0c63ab3-8bd8-4b7e-b0ec-278136de3f69.png)
