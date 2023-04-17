@@ -4,7 +4,7 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 module.exports = {
-  client: 'mysql2',
+  client:process.env.db_client || 'mysql2',
   connection: {
     host : process.env.db_host || 'localhost',
     port : process.env.db_port ||  3306,
