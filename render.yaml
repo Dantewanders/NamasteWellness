@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: front Namaste Wellness
+    name: front_namaste_wellness
     env: static
     buildCommand: cd ui; yarn install --production=false; yarn build
     staticPublishPath: ui/build/
@@ -12,7 +12,7 @@ services:
         source: /*
         destination: /index.html
   - type: web
-    name: Namaste Wellness
+    name: namaste_wellness
     plan: free
     env: node
     buildCommand: cd api; yarn
