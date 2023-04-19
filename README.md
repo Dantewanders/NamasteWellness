@@ -19,3 +19,4 @@ The app allows the user to log their moods, sleep, thoughts and feelings. It tra
 ![IMG_4277](https://user-images.githubusercontent.com/121504846/232482843-d89a0234-0694-48a2-aef3-54e182936434.JPG)
 
 ![Screenshot 2023-04-17 081917](https://user-images.githubusercontent.com/121504846/232482880-e0c63ab3-8bd8-4b7e-b0ec-278136de3f69.png)
+[NamasteWellness PP.pptx](https://github.com/Dantewanders/NamasteWellness/files/11272956/NamasteWellness.PP.pptx)
