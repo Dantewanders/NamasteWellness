@@ -1,15 +1,24 @@
-This is my capstone project for JRS Coding Bootcamp.
 
-##Code Stack
+<h1 align="center">
+ Namaste Wellness </h1>
+<h3 align="center">👋
+ This is my Capstone project for JRS Coding Bootcamp. 👋</h3>
 
-It is built with a tech stack of
-MySQL,
-KNEX,
-Express,
-React,
-Node JS,
-Styling with Material UI,
-App requires Auth login.
+<h3 align="left">🔭 My Code Stack:</h3>
+<p align="left">
+<l>MySQL
+
+<l>KNEX
+
+<l>Express
+
+<l>React
+
+<l>Node JS
+
+<l>Styling with Material UI,
+
+<p>This App requires Auth login.</P>
 
 Tracking your mental health can be difficult. Understanding your mood helps you manage your emotions, energy and feel better. This app allows the user to create a Journal that tracks their mood, energy and sleep to monitor, gain introspection and to share with a licensed professional.
 If you are more aware of your mental health, you may be able to better manage your lifestyle, make informed decisions, prevent or avoid triggers, and work towards a better quality of life.
@@ -17,9 +26,9 @@ If you are more aware of your mental health, you may be able to better manage yo
 
 I have attached a power point that shares an overview of the project.
 
-##Installation.
+<h1>Installation</h1>
 
-Open integrated terminals for the "api" and "ui" folders.
+<p>Open integrated terminals for the "api" and "ui" folders.
 
 In each terminal, run npm install to install dependencies.
 
@@ -27,9 +36,9 @@ Make sure you have an instance of Docker running.
 
 Create a database named Namaste_db.
 
-In the "api" intergrated terminal, run npx knex migrate:latest and npx knex seed:run to create and seed tables.
+In the "api" intergrated terminal, run npx knex migrate:latest and npx knex seed:run to create and seed tables.</p>
 
-##Starting the app
+<h1>Starting the app</h1>
 
 Using both intergrated terminals, run npm start to start the app!
 
@@ -50,6 +59,9 @@ To start, create an account! Click the login button on the navbar. In this page,
 ![Screenshot 2023-04-17 081917](https://user-images.githubusercontent.com/121504846/232482880-e0c63ab3-8bd8-4b7e-b0ec-278136de3f69.png)
 
 https://github.com/Dantewanders
-www.linkedin.com/in/Dante-p-Taylor
+<h3 align="left">Connect with me:</h3>
+<p align="left">
+<a href="https://linkedin.com/in/dante-p-taylor" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="dante-p-taylor" height="30" width="40" /></a>
+</p>
 
 
