@@ -1,5 +1,7 @@
 This is my capstone project for JRS Coding Bootcamp.
 
+##Code Stack
+
 It is built with a tech stack of
 MySQL,
 KNEX,
@@ -15,15 +17,24 @@ If you are more aware of your mental health, you may be able to better manage yo
 
 I have attached a power point that shares an overview of the project.
 
-Installation
+##Installation.
+
 Open integrated terminals for the "api" and "ui" folders.
-In each terminal, run npm install to install dependencies
+
+In each terminal, run npm install to install dependencies.
+
 Make sure you have an instance of Docker running.
+
 Create a database named Namaste_db.
-In the "api" intergrated terminal, run npx knex migrate:latest and npx knex seed:run to create and seed tables
-Starting the app
+
+In the "api" intergrated terminal, run npx knex migrate:latest and npx knex seed:run to create and seed tables.
+
+##Starting the app
+
 Using both intergrated terminals, run npm start to start the app!
+
 This should automatically open your browser with the link http://localhost:3000 to access the app.
+
 To start, create an account! Click the login button on the navbar. In this page, it has a link "create an account" which will take you to the register page to create an account!
 
 
