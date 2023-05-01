@@ -25,6 +25,7 @@ If you are more aware of your mental health, you may be able to better manage yo
 
 
 I have attached a power point that shares an overview of the project.
+[NamasteWellness](https://github.com/Dantewanders/NamasteWellness/files/11272956/NamasteWellness.PP.pptx)
 
 <h1>Installation</h1>
 
@@ -47,7 +48,7 @@ This should automatically open your browser with the link http://localhost:3000 
 To start, create an account! Click the login button on the navbar. In this page, it has a link "create an account" which will take you to the register page to create an account!
 
 
-[NamasteWellness PP.pptx](https://github.com/Dantewanders/NamasteWellness/files/11272956/NamasteWellness.PP.pptx)
+
 
 
 ![Screenshot 2023-04-17 082257](https://user-images.githubusercontent.com/121504846/232482787-7a19aa75-8a72-48ac-b4c4-29b8b0b0b6d6.png)
