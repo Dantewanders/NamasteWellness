@@ -12,6 +12,8 @@ The app allows the user to log their moods, sleep, thoughts and feelings. It tra
 
 
 
+
+
 ![Screenshot 2023-04-17 082257](https://user-images.githubusercontent.com/121504846/232482787-7a19aa75-8a72-48ac-b4c4-29b8b0b0b6d6.png)
 
 ![IMG_4282](https://user-images.githubusercontent.com/121504846/232482817-844ea4db-e552-425e-9154-4010ac823485.JPG)
