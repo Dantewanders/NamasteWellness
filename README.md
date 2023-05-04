@@ -59,18 +59,13 @@ The app allows the user to log their moods, sleep, thoughts and feelings. It tra
 <h3 align="left">Development</h3>
 
 <h3 align="left">User Flow Diagram</h3> 
- 
-![Screenshot 2023-04-17 082257](https://user-images.githubusercontent.com/121504846/232482787-7a19aa75-8a72-48ac-b4c4-29b8b0b0b6d6.png)
- 
+ ![Userflow](ui/src/Images/userFlow_Diagram.png)
+
  <h3 align="left">Database Diagram</h3>
+![Schema](ui/src/Images/DB%20Schema.JPG)
 
-![IMG_4282](https://user-images.githubusercontent.com/121504846/232482817-844ea4db-e552-425e-9154-4010ac823485.JPG)
-  <h3 align="left">Low Fidelity Wireframe</h3>
-
-![IMG_4277](https://user-images.githubusercontent.com/121504846/232482843-d89a0234-0694-48a2-aef3-54e182936434.JPG)
-  <h3 align="left">Namaste Wellness App Screenshot</h3>
-
-![Screenshot 2023-04-17 081917](https://user-images.githubusercontent.com/121504846/232482880-e0c63ab3-8bd8-4b7e-b0ec-278136de3f69.png)
+<h3 align="left">Wireframe</h3>
+![Wireframe](ui/src/Images/WireFrame.JPG)
 
 https://github.com/Dantewanders
 <h3 align="left">Connect with me:</h3>
