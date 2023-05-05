@@ -59,7 +59,8 @@ The app allows the user to log their moods, sleep, thoughts and feelings. It tra
 <h3 align="left">Development</h3>
 
 <h3 align="left">User Flow Diagram</h3> 
- ![Userflow](ui/src/Images/userFlow_Diagram.png)
+![userFlow_Diagram](https://user-images.githubusercontent.com/121504846/236473896-66d02d09-a7b7-4a04-b800-2834332a42eb.png)
+
 
  <h3 align="left">Database Diagram</h3>
 ![Schema](ui/src/Images/DB%20Schema.JPG)
