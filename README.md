@@ -59,14 +59,17 @@ The app allows the user to log their moods, sleep, thoughts and feelings. It tra
 <h3 align="left">Development</h3>
 
 <h3 align="left">User Flow Diagram</h3> 
+ 
 ![userFlow_Diagram](https://user-images.githubusercontent.com/121504846/236473896-66d02d09-a7b7-4a04-b800-2834332a42eb.png)
 
 
  <h3 align="left">Database Diagram</h3>
-![Schema](ui/src/Images/DB%20Schema.JPG)
+
+![DB Schema](https://user-images.githubusercontent.com/121504846/236474266-cced7aba-1e10-4eea-983f-4a03894c5b09.JPG)
 
 <h3 align="left">Wireframe</h3>
-![Wireframe](ui/src/Images/WireFrame.JPG)
+
+![WireFrame](https://user-images.githubusercontent.com/121504846/236474517-d8328724-6353-4e06-ad21-608857bf98c7.JPG)
 
 https://github.com/Dantewanders
 <h3 align="left">Connect with me:</h3>
