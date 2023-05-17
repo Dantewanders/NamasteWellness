@@ -4,7 +4,7 @@
 <h3 align="center">👋
  This is my Capstone project for JRS Coding Bootcamp. 👋</h3>
 
-<h3 align="left">🔭 My Code Stack:</h3>
+<h3 align="left">My Code Stack:</h3>
 <p align="left">
 <l>MySQL
 
@@ -35,7 +35,7 @@ In each terminal, run npm install to install dependencies.
 
 Make sure you have an instance of Docker running.
 
-Create a database named Namaste_db.
+Create a database named namaste.
 
 In the "api" intergrated terminal, run npx knex migrate:latest and npx knex seed:run to create and seed tables.</p>
 
@@ -43,7 +43,7 @@ In the "api" intergrated terminal, run npx knex migrate:latest and npx knex seed
 
 Using both intergrated terminals, run npm start to start the app!
 
-This should automatically open your browser with the link http://localhost:3000 to access the app.
+This will automatically open your browser with the link http://localhost:3000 to access the app.
 
 It is built with a tech stack of
 MySQL
