@@ -7,12 +7,8 @@ import { Typography } from "@mui/material";
 import { isUserLoggedIn } from "../../utility/utils";
 import "./index.css";
 
-
-
-
-
 function MyMood() {
-  const [Mood, setMood] = useState(""); //this is to select my mood
+  const [Mood, setMood] = useState(""); //this is to set teh state of the mood
   const [errorMsg, setErrorMsg] = useState(""); //this is to display my error message
   const [isChoosing, setIsChoosing] = useState(false);
 
@@ -31,7 +27,7 @@ function MyMood() {
       return setErrorMsg("Please select your Mood before continuing.");
     }
 
-    localStorage.setItem("Mood", Mood); //this is to store the mood in the local storage
+    localStorage.setItem("Mood", Mood); //this is to store the mood in the local storage the journal container will pull for the payload.
 
     navigate("/mysleep"); //this is to navigate to the mysleep page
 
@@ -100,7 +96,7 @@ function MyMood() {
               <Typography fontWeight="bold">
                 <div className="feeling">
                   <div>Happy</div>
-                                 </div>
+                </div>
               </Typography>
             </Button>
           </Grid>
@@ -113,7 +109,6 @@ function MyMood() {
               <Typography fontWeight="bold">
                 <div className="feeling">
                   <div>Positive</div>
-                  
                 </div>
               </Typography>
             </Button>
@@ -163,7 +158,6 @@ function MyMood() {
               <Typography fontWeight="bold">
                 <div className="feeling">
                   <div>Sad</div>
-                  
                 </div>
               </Typography>
             </Button>

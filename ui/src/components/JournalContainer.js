@@ -12,7 +12,7 @@ function JournalContainer() {
     const journalPayload = {
       // Create a payload object
       thoughts,
-      sleepDuration: localStorage.getItem("Sleep"),
+      sleepDuration: localStorage.getItem("Sleep"), // Get the sleep duration from local storage
       mood: localStorage.getItem("Mood"),
       energy: localStorage.getItem("Energy"),
     };
@@ -20,14 +20,13 @@ function JournalContainer() {
       .then((response) => {
         console.log(response);
         swal("Todays Journal", "Submitted Successfully!", "success");
-        
+
         //redirect after a deley to my wellness page
         setTimeout(() => {
           window.location.href = "/mywellness";
         }, 3000);
-
       })
-      //maybe add a snackbar here
+
       .catch((err) => console.log("Unable to submit journal"));
   };
 

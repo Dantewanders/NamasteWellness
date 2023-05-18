@@ -4,8 +4,9 @@ import { getUserProfile } from "../../utility/api";
 import Grid from "@mui/material/Grid";
 import { InputLabel } from "@mui/material";
 import Box from "@mui/material/Box";
-import InputUnstyled from "@mui/base/InputUnstyled";
+import InputUnstyled from "@mui/base";
 import { styled } from "@mui/system";
+import Input from '@mui/base/Input';
 
 const blue = {
   100: "#DAECFF",
@@ -64,7 +65,7 @@ const StyledInputElement = styled("input")(
 
 const CustomInput = React.forwardRef(function CustomInput(props, ref) {
   return (
-    <InputUnstyled slots={{ input: StyledInputElement }} {...props} ref={ref} />
+    <Input slots={{ input: StyledInputElement }} {...props} ref={ref} />
   );
 });
 
